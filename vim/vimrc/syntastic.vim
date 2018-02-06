@@ -1,4 +1,13 @@
+"
+" -------------- SYNTASTIC SYNTAX HIGHLIGHT AND LINTER -------------- "
+"
+"
 
+" -- include syntastic plugin
+Plugin 'scrooloose/syntastic'							
+
+
+" -- set syntastic options
 "let g:syntastic_debug=1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
