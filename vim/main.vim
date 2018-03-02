@@ -1,10 +1,10 @@
 
+execute "set runtimepath=".&runtimepath.",".$HOME."/devtools/vim"
+"execute "set runtimepath=".$HOME."/devtools/vim,".&runtimepath
 
 " -- MAP LEADER -- "
 let mapleader = "\\"
 let g:mapleader = "\\"
-
-
 
 " ---------- GLOBAl DECLARATIONS --------- "
 let g:devtools_path = get(g:, 'devtools_path', "~/devtools")				" set devtools vim directory
@@ -21,8 +21,6 @@ if g:devtools_bundle || g:devtools_vundle
 	call Importrc("plugins.vim")																			" include bundle packages
 endif
 
-set runtimepath+=$HOME/devtools/vim/themes/material
-set runtimepath+=$HOME/devtools/vim/themes/solarizedweb
 
 filetype plugin indent on																						" Turn on syntax for filetypes
 

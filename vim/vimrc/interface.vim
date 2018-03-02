@@ -15,6 +15,8 @@ elseif has("unix")
 	set gfn=Monospace\ 11
 endif
 
+"set gfn=~/devtools/Monaco-Powerline.otf
+
 set lazyredraw																		" performance enhancement for macros
 set ruler																					" always show current pos.
 set cmdheight=2																		" larger cmd line
@@ -42,6 +44,10 @@ set smartcase																			" add case sensitive search when capitol letter 
 
 set autoread																			" reload file if another source changes it
 
+set encoding=utf-8																" use UTF-8 file encoding
+"set fillchars+=stl:\ ,stlnc:\
+set ffs=unix,mac,dos
+
 
 " ------- COLOR AND FONTS ---------- "
 if $COLORTERM == 'gnome-terminal'
@@ -51,12 +57,35 @@ endif
 set background=dark																" default to dark background
 colorscheme material  														" color scheme for editor
 
+
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme = 'atomic'
+let g:airline_theme = 'material'
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 0
 
-set encoding=utf-8																" use UTF-8 file encoding
-set ffs=unix,mac,dos
+"let g:airline#extensions#tabline#left_sep = '⮀'
+"let g:airline#extensions#tabline#left_alt_sep = '⮁'
+"let g:airline#extensions#tabline#right_sep = '⮂'
+"let g:airline#extensions#tabline#right_alt_sep = '⮃'
+  
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+  
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+let g:airline_symbols.maxlinenr = '㏑'
+
+"let g:airline_section_warning = ''
+"let g:airline_section_c = ''
+
 
 
 " ---------- FILES AND BACKUPS ------ "

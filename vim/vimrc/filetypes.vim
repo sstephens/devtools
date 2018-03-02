@@ -13,14 +13,18 @@ au FileType javascript inoremap <buffer> $f //--- PH<esc>FP2xi
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
 
-
 "
 " ---------------------- CSS Section --------------------
 "
-autocmd BufRead,BufNewFile *.scss set filetype=css
-
 autocmd FileType css set iskeyword+=-
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS		
+
+"
+" ---------------------- SASS Section --------------------
+"
+autocmd FileType sass set iskeyword+=-
+autocmd FileType sass set omnifunc=csscomplete#CompleteCSS		
+autocmd BufRead,BufNewFile *.scss set filetype=sass
 
 "
 " ------------------- Python section ---------------------

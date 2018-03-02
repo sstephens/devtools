@@ -498,6 +498,7 @@ endif
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
 " exe compiled formats
+exe "hi! NonText"        .s:fmt_none   .s:fg_white_normal			.s:bg_black_normal
 
 exe "hi! Normal"         .s:fmt_none   .s:fg_white_normal			.s:bg_back
 
@@ -653,7 +654,9 @@ exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue_normal			.s:bg_none
 " diff highlighting "{{{
 " ---------------------------------------------------------------------
 hi! link diffAdded Statement
-hi! link diffLine Identifier
+"hi! link diffLine Identifier
+
+exe "hi! diffLine"          .s:fmt_none    .s:fg_black_bright			.s:bg_yellow_bright
 "}}}
 " git & gitcommit highlighting "{{{
 "git
@@ -707,13 +710,6 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 " }}}
 " javascript highlighting "{{{
 " ---------------------------------------------------------------------
-syntax match   javascriptDocParamName          contained /\[\?[0-9a-zA-Z_=\.]\+\]\?/ nextgroup=javascriptDocParamType,javascriptDocDesc skipwhite
-syntax match   javascriptDocParamType          contained /{.\+}/ nextgroup=javascriptDocDesc skipwhite
-syntax match   javascriptDocNamedParamType     contained /{.\+}/ nextgroup=javascriptDocDesc skipwhite
-
-syntax match   javascriptParens                /[()]/
-
-
 exe "hi! javascriptOpSymbol"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
 exe "hi! javascriptOpSymbols"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
 exe "hi! javascriptInvalidOp"								.s:fmt_none		.s:fg_red_normal			.s:bg_none
@@ -796,6 +792,9 @@ exe "hi! javascriptComment"									.s:fmt_ital		.s:fg_black_bright		.s:bg_none
 exe "hi! javascriptLineComment"							.s:fmt_ital		.s:fg_black_bright		.s:bg_none
 exe "hi! javascriptDocComment"							.s:fmt_ital		.s:fg_black_bright		.s:bg_none
 
+exe "hi! javascriptCodeComment"							.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
+exe "hi! javascriptBoldComment"							.s:fmt_none		.s:fg_green_normal		.s:bg_none
+
 exe "hi! javascriptDocTags"									.s:fmt_none		.s:fg_cyan_normal			.s:bg_none
 exe "hi! javascriptDocNotation"							.s:fmt_none		.s:fg_cyan_normal			.s:bg_none
 exe "hi! javascriptDocName"									.s:fmt_none		.s:fg_blue_normal			.s:bg_none
@@ -814,12 +813,8 @@ exe "hi! htmlSpecialTagName"		.s:fmt_ital .s:fg_blue_normal   .s:bg_none
 exe "hi! htmlArg"								.s:fmt_none .s:fg_yellow_bright .s:bg_none
 exe "hi! javaScript"						.s:fmt_none .s:fg_yellow_normal .s:bg_none
 "}}}
-" sass highlighting "{{{
+" css highlighting "{{{
 " ---------------------------------------------------------------------
-
-syn match		cssColor		contained "#[0-9A-Fa-f]\{3\}\>"
-syn match		cssColor		contained "#[0-9A-Fa-f]\{6\}\>"
-syn keyword cssFontAttr contained proxima proximathin proximabold
 
 "syn match			scssImportant			"!important" contained
 
@@ -834,6 +829,7 @@ syn keyword cssFontAttr contained proxima proximathin proximabold
 "exe "hi! cssUnitDecorators"		.s:fmt_none		.s:fg_red_bright		.s:bg_none
 
 exe "hi! cssColor"							.s:fmt_none		.s:fg_blue_bright		.s:bg_none
+exe "hi! cssColorHex"						.s:fmt_none		.s:fg_blue_bright		.s:bg_none
 exe "hi! cssFontAttr"						.s:fmt_none		.s:fg_blue_bright		.s:bg_none
 
 exe "hi! cssAttr"								.s:fmt_none		.s:fg_cyan_normal		.s:bg_none
@@ -851,6 +847,7 @@ exe "hi! cssClassNameDot"				.s:fmt_none		.s:fg_blue_normal		.s:bg_none
 
 exe "hi! cssIdentifier"					.s:fmt_none		.s:fg_green_normal	.s:bg_none
 
+exe "hi! cssTodo"								.s:fmt_none		.s:fg_magenta_normal .s:bg_none
 
 "}}}
 " sass highlighting "{{{
