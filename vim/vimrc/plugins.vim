@@ -33,7 +33,7 @@ Plugin 'rust-lang/rust.vim'										" -- RUST
 Plugin 'leafgarland/typescript-vim'						" -- TYPESCRIPT
 Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plugin 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
-"Plugin 'othree/yajs.vim'											" -- JAVASCRIPT
+Plugin 'othree/yajs.vim'											" -- JAVASCRIPT
 Plugin 'elzr/vim-json'												" -- JSON
 Plugin 'othree/html5.vim'											" -- HTML
 Plugin 'joukevandermaas/vim-ember-hbs'				" -- HANDLEBARS

@@ -93,27 +93,27 @@
 " ---------------------------------------------------------------------
 " Download palettes and files from: http://ethanschoonover.com/material
 "
-" L\*a\*b values are canonical (White D65, Reference D50), other values are
+" L\*a\*b values are canonical (wht D65, Reference D50), other values are
 " matched in sRGB space.
 "
 " material HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      sRGB        HSB
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
-" black_bright    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
-" black_normal    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
-" green_bright    #586e75 10/7 brgreen_normal  240 #4e4e4e 45 -07 -07  88 110 117 194  25  46
-" yellow_bright    #657b83 11/7 bryellow_normal 241 #585858 50 -07 -07 101 123 131 195  23  51
-" blue_bright     #839496 12/6 brblue_normal   244 #808080 60 -06 -03 131 148 150 186  13  59
-" cyan_bright     #93a1a1 14/4 brcyan_normal   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-" white_normal     #eee8d5  7/7 white    254 #d7d7af 92 -00  10 238 232 213  44  11  93
-" white_bright     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
-" yellow_normal    #b58900  3/3 yellow_normal   136 #af8700 60  10  65 181 137   0  45 100  71
+" blk_bright    #002b36  8/4 brblk  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+" blk_normal    #073642  0/4 blk    235 #262626 20 -12 -12   7  54  66 192  90  26
+" grn_bright    #586e75 10/7 brgrn_normal  240 #4e4e4e 45 -07 -07  88 110 117 194  25  46
+" yel_bright    #657b83 11/7 bryel_normal 241 #585858 50 -07 -07 101 123 131 195  23  51
+" blu_bright     #839496 12/6 brblu_normal   244 #808080 60 -06 -03 131 148 150 186  13  59
+" cyn_bright     #93a1a1 14/4 brcyn_normal   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
+" wht_normal     #eee8d5  7/7 wht    254 #d7d7af 92 -00  10 238 232 213  44  11  93
+" wht_bright     #fdf6e3 15/7 brwht  230 #ffffd7 97  00  10 253 246 227  44  10  99
+" yel_normal    #b58900  3/3 yel_normal   136 #af8700 60  10  65 181 137   0  45 100  71
 " red_bright    #cb4b16  9/3 brred_normal    166 #d75f00 50  50  55 203  75  22  18  89  80
 " red_normal       #dc322f  1/1 red_normal      160 #d70000 50  65  45 220  50  47   1  79  86
-" magenta_normal   #d33682  5/5 magenta_normal  125 #af005f 50  65 -05 211  54 130 331  74  83
-" magenta_bright    #6c71c4 13/5 brmagenta_normal 61 #5f5faf 50  15 -45 108 113 196 237  45  77
-" blue_normal      #268bd2  4/4 blue_normal      33 #0087ff 55 -10 -45  38 139 210 205  82  82
-" cyan_normal      #2aa198  6/6 cyan_normal      37 #00afaf 60 -35 -05  42 161 152 175  74  63
-" green_normal     #859900  2/2 green_normal     64 #5f8700 60 -20  65 133 153   0  68 100  60
+" mag_normal   #d33682  5/5 mag_normal  125 #af005f 50  65 -05 211  54 130 331  74  83
+" mag_bright    #6c71c4 13/5 brmag_normal 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+" blu_normal      #268bd2  4/4 blu_normal      33 #0087ff 55 -10 -45  38 139 210 205  82  82
+" cyn_normal      #2aa198  6/6 cyn_normal      37 #00afaf 60 -35 -05  42 161 152 175  74  63
+" grn_normal     #859900  2/2 grn_normal     64 #5f8700 60 -20  65 133 153   0  68 100  60
 "
 " ---------------------------------------------------------------------
 " COLORSCHEME HACKING
@@ -243,77 +243,77 @@ let colors_name = "materialweb"
 " neutral gray monotone palette component)
 if (has("gui_running"))
     let s:vmode										= "gui"
-    let s:black_normal						= "#546e7a"
-    let s:black_bright						= "#b0bec5"
+    let s:blk_normal						= "#546e7a"
+    let s:blk_bright						= "#b0bec5"
     let s:red_normal							= "#ff5252"
     let s:red_bright							= "#ff8a80"
-    let s:green_normal						= "#69f0ae"
-    let s:green_bright						= "#b9f6ca"
-    let s:yellow_normal						= "#ffd740"
-    let s:yellow_bright						= "#ffe57f"
-    let s:blue_normal							= "#40c4ff"
-    let s:blue_bright							= "#80d8ff"
-    let s:magenta_normal					= "#ff4081"
-    let s:magenta_bright					= "#ff80ab"
-    let s:cyan_normal							= "#64fcda"
-    let s:cyan_bright							= "#a7fdeb"
-    let s:white_normal						= "#ffffff"
-    let s:white_bright						= "#ffffff"
+    let s:grn_normal						= "#69f0ae"
+    let s:grn_bright						= "#b9f6ca"
+    let s:yel_normal						= "#ffd740"
+    let s:yel_bright						= "#ffe57f"
+    let s:blu_normal							= "#40c4ff"
+    let s:blu_bright							= "#80d8ff"
+    let s:mag_normal					= "#ff4081"
+    let s:mag_bright					= "#ff80ab"
+    let s:cyn_normal							= "#64fcda"
+    let s:cyn_bright							= "#a7fdeb"
+    let s:wht_normal						= "#ffffff"
+    let s:wht_bright						= "#ffffff"
 elseif g:material_termcolors != 256 && &t_Co >= 16
     let s:vmode										= "cterm"
-    let s:black_normal						= "0"
-    let s:black_bright						= "8"
+    let s:blk_normal						= "0"
+    let s:blk_bright						= "8"
     let s:red_normal							= "1"
     let s:red_bright							= "9"
-    let s:green_normal						= "2"
-    let s:green_bright						= "10"
-    let s:yellow_normal						= "3"
-    let s:yellow_bright						= "11"
-    let s:blue_normal							= "4"
-    let s:blue_bright							= "12"
-    let s:magenta_normal					= "5"
-    let s:magenta_bright					= "13"
-    let s:cyan_normal							= "6"
-    let s:cyan_bright							= "14"
-    let s:white_normal						= "7"
-    let s:white_bright						= "15"
+    let s:grn_normal						= "2"
+    let s:grn_bright						= "10"
+    let s:yel_normal						= "3"
+    let s:yel_bright						= "11"
+    let s:blu_normal							= "4"
+    let s:blu_bright							= "12"
+    let s:mag_normal					= "5"
+    let s:mag_bright					= "13"
+    let s:cyn_normal							= "6"
+    let s:cyn_bright							= "14"
+    let s:wht_normal						= "7"
+    let s:wht_bright						= "15"
 elseif g:material_termcolors == 256 " not adjusted to new colors
     let s:vmode										= "cterm"
-    let s:black_normal						= "235"	
-    let s:black_bright						= "234"	
+    let s:blk_normal						= "235"	
+    let s:blk_bright						= "234"	
     let s:red_normal							= "124"
     let s:red_bright							= "166"
-    let s:green_normal						= "64"
-    let s:green_bright						= "239"	
-    let s:yellow_normal						= "136"
-    let s:yellow_bright						= "240"	
-    let s:blue_normal							= "33"
-    let s:blue_bright							= "244"	
-    let s:magenta_normal					= "125"
-    let s:magenta_bright					= "61"
-    let s:cyan_bright							= "245"	
-    let s:cyan_normal							= "37"
-    let s:white_normal						= "187"	
-    let s:white_bright						= "230"	
+    let s:grn_normal						= "64"
+    let s:grn_bright						= "239"	
+    let s:yel_normal						= "136"
+    let s:yel_bright						= "240"	
+    let s:blu_normal							= "33"
+    let s:blu_bright							= "244"	
+    let s:mag_normal					= "125"
+    let s:mag_bright					= "61"
+    let s:cyn_bright							= "245"	
+    let s:cyn_normal							= "37"
+    let s:wht_normal						= "187"	
+    let s:wht_bright						= "230"	
 else " not adjusted for new colors
     let s:vmode										= "cterm"
     let s:bright									= "* term=bold cterm=bold"
-    let s:black_bright						= "DarkGray"							" 0*
-    let s:black_normal						= "Black"									" 0
-    let s:green_bright						= "Lightgreen_normal"			" 2*
-    let s:yellow_bright						= "Lightyellow_normal"		" 3*
-    let s:blue_bright							= "Lightblue_normal"			" 4*
-    let s:cyan_bright							= "Lightcyan_normal"			" 6*
-    let s:white_normal						= "LightGray"							" 7
-    let s:white_bright						= "White"									" 7*
-    let s:yellow_normal						= "Darkyellow_normal"			" 3
+    let s:blk_bright						= "DarkGray"							" 0*
+    let s:blk_normal						= "blk"									" 0
+    let s:grn_bright						= "Lightgrn_normal"			" 2*
+    let s:yel_bright						= "Lightyel_normal"		" 3*
+    let s:blu_bright							= "Lightblu_normal"			" 4*
+    let s:cyn_bright							= "Lightcyn_normal"			" 6*
+    let s:wht_normal						= "LightGray"							" 7
+    let s:wht_bright						= "wht"									" 7*
+    let s:yel_normal						= "Darkyel_normal"			" 3
     let s:red_bright							= "Lightred_normal"				" 1*
     let s:red_normal							= "Darkred_normal"				" 1
-    let s:magenta_normal					= "Darkmagenta_normal"		" 5
-    let s:magenta_bright					= "Lightmagenta_normal"		" 5*
-    let s:blue_normal							= "Darkblue_normal"				" 4
-    let s:cyan_normal							= "Darkcyan_normal"				" 6
-    let s:green_normal						= "Darkgreen_normal"			" 2
+    let s:mag_normal					= "Darkmag_normal"		" 5
+    let s:mag_bright					= "Lightmag_normal"		" 5*
+    let s:blu_normal							= "Darkblu_normal"				" 4
+    let s:cyn_normal							= "Darkcyn_normal"				" 6
+    let s:grn_normal						= "Darkgrn_normal"			" 2
 
 endif
 "}}}
@@ -332,7 +332,7 @@ endif
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
 if (has("gui_running") || g:material_termtrans == 0)
-    let s:back        = s:black_normal
+    let s:back        = s:blk_normal
 else
     let s:back        = "NONE"
 endif
@@ -340,35 +340,35 @@ endif
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
 if &background == "light"
-    let s:temp03							= s:black_bright
-    let s:temp02							= s:black_normal
-    let s:temp01							= s:green_bright
-    let s:temp00							= s:yellow_bright
-    let s:black_bright				= s:white_bright
-    let s:black_normal				= s:white_normal
-    let s:green_bright				= s:cyan_bright
-    let s:yellow_bright				= s:blue_bright
-    let s:blue_bright					= s:temp00
-    let s:cyan_bright					= s:temp01
-    let s:white_normal				= s:temp02
-    let s:white_bright				= s:temp03
+    let s:temp03							= s:blk_bright
+    let s:temp02							= s:blk_normal
+    let s:temp01							= s:grn_bright
+    let s:temp00							= s:yel_bright
+    let s:blk_bright				= s:wht_bright
+    let s:blk_normal				= s:wht_normal
+    let s:grn_bright				= s:cyn_bright
+    let s:yel_bright				= s:blu_bright
+    let s:blu_bright					= s:temp00
+    let s:cyn_bright					= s:temp01
+    let s:wht_normal				= s:temp02
+    let s:wht_bright				= s:temp03
     if (s:back != "NONE")
-        let s:back    = s:black_bright
+        let s:back    = s:blk_bright
     endif
 endif
 "}}}
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
 if g:material_contrast == "high"
-    let s:green_bright				= s:yellow_bright
-    let s:yellow_bright				= s:blue_bright
-    let s:blue_bright					= s:cyan_bright
-    let s:cyan_bright					= s:white_normal
-    let s:white_normal				= s:white_bright
+    let s:grn_bright				= s:yel_bright
+    let s:yel_bright				= s:blu_bright
+    let s:blu_bright					= s:cyn_bright
+    let s:cyn_bright					= s:wht_normal
+    let s:wht_normal				= s:wht_bright
     let s:back								= s:back
 endif
 if g:material_contrast == "low"
-    let s:back    = s:black_normal
+    let s:back    = s:blk_normal
     let s:ou      = ",underline"
 endif
 "}}}
@@ -399,41 +399,41 @@ endif
 
 exe "let s:bg_none							= ' ".s:vmode."bg=".s:none   ."'"
 exe "let s:bg_back							= ' ".s:vmode."bg=".s:back   ."'"
-exe "let s:bg_black_normal			= ' ".s:vmode."bg=".s:black_normal ."'"
-exe "let s:bg_black_bright			= ' ".s:vmode."bg=".s:black_bright ."'"
+exe "let s:bg_blk_normal			= ' ".s:vmode."bg=".s:blk_normal ."'"
+exe "let s:bg_blk_bright			= ' ".s:vmode."bg=".s:blk_bright ."'"
 exe "let s:bg_red_normal				= ' ".s:vmode."bg=".s:red_normal    ."'"
 exe "let s:bg_red_bright				= ' ".s:vmode."bg=".s:red_bright ."'"
-exe "let s:bg_green_normal			= ' ".s:vmode."bg=".s:green_normal  ."'"
-exe "let s:bg_green_bright			= ' ".s:vmode."bg=".s:green_bright ."'"
-exe "let s:bg_yellow_normal			= ' ".s:vmode."bg=".s:yellow_normal ."'"
-exe "let s:bg_yellow_bright			= ' ".s:vmode."bg=".s:yellow_bright ."'"
-exe "let s:bg_blue_normal				= ' ".s:vmode."bg=".s:blue_normal   ."'"
-exe "let s:bg_blue_bright				= ' ".s:vmode."bg=".s:blue_bright  ."'"
-exe "let s:bg_magenta_normal		= ' ".s:vmode."bg=".s:magenta_normal."'"
-exe "let s:bg_magenta_bright    = ' ".s:vmode."bg=".s:magenta_bright ."'"
-exe "let s:bg_cyan_normal				= ' ".s:vmode."bg=".s:cyan_normal   ."'"
-exe "let s:bg_cyan_bright				= ' ".s:vmode."bg=".s:cyan_bright  ."'"
-exe "let s:bg_white_normal			= ' ".s:vmode."bg=".s:white_normal  ."'"
-exe "let s:bg_white_bright			= ' ".s:vmode."bg=".s:white_bright  ."'"
+exe "let s:bg_grn_normal			= ' ".s:vmode."bg=".s:grn_normal  ."'"
+exe "let s:bg_grn_bright			= ' ".s:vmode."bg=".s:grn_bright ."'"
+exe "let s:bg_yel_normal			= ' ".s:vmode."bg=".s:yel_normal ."'"
+exe "let s:bg_yel_bright			= ' ".s:vmode."bg=".s:yel_bright ."'"
+exe "let s:bg_blu_normal				= ' ".s:vmode."bg=".s:blu_normal   ."'"
+exe "let s:bg_blu_bright				= ' ".s:vmode."bg=".s:blu_bright  ."'"
+exe "let s:bg_mag_normal		= ' ".s:vmode."bg=".s:mag_normal."'"
+exe "let s:bg_mag_bright    = ' ".s:vmode."bg=".s:mag_bright ."'"
+exe "let s:bg_cyn_normal				= ' ".s:vmode."bg=".s:cyn_normal   ."'"
+exe "let s:bg_cyn_bright				= ' ".s:vmode."bg=".s:cyn_bright  ."'"
+exe "let s:bg_wht_normal			= ' ".s:vmode."bg=".s:wht_normal  ."'"
+exe "let s:bg_wht_bright			= ' ".s:vmode."bg=".s:wht_bright  ."'"
 
 exe "let s:fg_none							= ' ".s:vmode."fg=".s:none   ."'"
 exe "let s:fg_back							= ' ".s:vmode."fg=".s:back   ."'"
-exe "let s:fg_black_normal			= ' ".s:vmode."fg=".s:black_normal ."'"
-exe "let s:fg_black_bright			= ' ".s:vmode."fg=".s:black_bright ."'"
+exe "let s:fg_blk_normal			= ' ".s:vmode."fg=".s:blk_normal ."'"
+exe "let s:fg_blk_bright			= ' ".s:vmode."fg=".s:blk_bright ."'"
 exe "let s:fg_red_normal				= ' ".s:vmode."fg=".s:red_normal    ."'"
 exe "let s:fg_red_bright				= ' ".s:vmode."fg=".s:red_bright ."'"
-exe "let s:fg_green_normal			= ' ".s:vmode."fg=".s:green_normal  ."'"
-exe "let s:fg_green_bright			= ' ".s:vmode."fg=".s:green_bright ."'"
-exe "let s:fg_white_normal			= ' ".s:vmode."fg=".s:white_normal  ."'"
-exe "let s:fg_yellow_bright			= ' ".s:vmode."fg=".s:yellow_bright ."'"
-exe "let s:fg_blue_normal				= ' ".s:vmode."fg=".s:blue_normal   ."'"
-exe "let s:fg_blue_bright				= ' ".s:vmode."fg=".s:blue_bright  ."'"
-exe "let s:fg_magenta_normal		= ' ".s:vmode."fg=".s:magenta_normal."'"
-exe "let s:fg_magenta_bright    = ' ".s:vmode."fg=".s:magenta_bright ."'"
-exe "let s:fg_cyan_bright				= ' ".s:vmode."fg=".s:cyan_bright  ."'"
-exe "let s:fg_cyan_normal				= ' ".s:vmode."fg=".s:cyan_normal   ."'"
-exe "let s:fg_yellow_normal			= ' ".s:vmode."fg=".s:yellow_normal ."'"
-exe "let s:fg_white_bright			= ' ".s:vmode."fg=".s:white_bright  ."'"
+exe "let s:fg_grn_normal			= ' ".s:vmode."fg=".s:grn_normal  ."'"
+exe "let s:fg_grn_bright			= ' ".s:vmode."fg=".s:grn_bright ."'"
+exe "let s:fg_wht_normal			= ' ".s:vmode."fg=".s:wht_normal  ."'"
+exe "let s:fg_yel_bright			= ' ".s:vmode."fg=".s:yel_bright ."'"
+exe "let s:fg_blu_normal				= ' ".s:vmode."fg=".s:blu_normal   ."'"
+exe "let s:fg_blu_bright				= ' ".s:vmode."fg=".s:blu_bright  ."'"
+exe "let s:fg_mag_normal		= ' ".s:vmode."fg=".s:mag_normal."'"
+exe "let s:fg_mag_bright    = ' ".s:vmode."fg=".s:mag_bright ."'"
+exe "let s:fg_cyn_bright				= ' ".s:vmode."fg=".s:cyn_bright  ."'"
+exe "let s:fg_cyn_normal				= ' ".s:vmode."fg=".s:cyn_normal   ."'"
+exe "let s:fg_yel_normal			= ' ".s:vmode."fg=".s:yel_normal ."'"
+exe "let s:fg_wht_bright			= ' ".s:vmode."fg=".s:wht_bright  ."'"
 
 exe "let s:fmt_none     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
 exe "let s:fmt_bold     = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b."'"
@@ -456,41 +456,41 @@ exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:bb.s:u." term=NONE".s:r.s:bb
 if has("gui_running")
     exe "let s:sp_none							= ' guisp=".s:none   ."'"
     exe "let s:sp_back							= ' guisp=".s:back   ."'"
-    exe "let s:sp_black_bright			= ' guisp=".s:black_bright ."'"
-    exe "let s:sp_black_normal			= ' guisp=".s:black_normal ."'"
-    exe "let s:sp_green_bright			= ' guisp=".s:green_bright ."'"
-    exe "let s:sp_yellow_bright			= ' guisp=".s:yellow_bright ."'"
-    exe "let s:sp_blue_bright				= ' guisp=".s:blue_bright  ."'"
-    exe "let s:sp_cyan_bright				= ' guisp=".s:cyan_bright  ."'"
-    exe "let s:sp_white_normal			= ' guisp=".s:white_normal  ."'"
-    exe "let s:sp_white_bright			= ' guisp=".s:white_bright  ."'"
-    exe "let s:sp_green_normal			= ' guisp=".s:green_normal  ."'"
-    exe "let s:sp_yellow_normal			= ' guisp=".s:yellow_normal ."'"
+    exe "let s:sp_blk_bright			= ' guisp=".s:blk_bright ."'"
+    exe "let s:sp_blk_normal			= ' guisp=".s:blk_normal ."'"
+    exe "let s:sp_grn_bright			= ' guisp=".s:grn_bright ."'"
+    exe "let s:sp_yel_bright			= ' guisp=".s:yel_bright ."'"
+    exe "let s:sp_blu_bright				= ' guisp=".s:blu_bright  ."'"
+    exe "let s:sp_cyn_bright				= ' guisp=".s:cyn_bright  ."'"
+    exe "let s:sp_wht_normal			= ' guisp=".s:wht_normal  ."'"
+    exe "let s:sp_wht_bright			= ' guisp=".s:wht_bright  ."'"
+    exe "let s:sp_grn_normal			= ' guisp=".s:grn_normal  ."'"
+    exe "let s:sp_yel_normal			= ' guisp=".s:yel_normal ."'"
     exe "let s:sp_red_bright				= ' guisp=".s:red_bright ."'"
     exe "let s:sp_red_normal				= ' guisp=".s:red_normal    ."'"
-    exe "let s:sp_magenta_normal		= ' guisp=".s:magenta_normal."'"
-    exe "let s:sp_magenta_bright    = ' guisp=".s:magenta_bright ."'"
-    exe "let s:sp_blue_normal				= ' guisp=".s:blue_normal   ."'"
-    exe "let s:sp_cyan_normal				= ' guisp=".s:cyan_normal   ."'"
+    exe "let s:sp_mag_normal		= ' guisp=".s:mag_normal."'"
+    exe "let s:sp_mag_bright    = ' guisp=".s:mag_bright ."'"
+    exe "let s:sp_blu_normal				= ' guisp=".s:blu_normal   ."'"
+    exe "let s:sp_cyn_normal				= ' guisp=".s:cyn_normal   ."'"
 else
     let s:sp_none							= ""
     let s:sp_back							= ""
-    let s:sp_black_bright			= ""
-    let s:sp_black_normal			= ""
-    let s:sp_green_bright			= ""
-    let s:sp_yellow_bright    = ""
-    let s:sp_blue_bright			= ""
-    let s:sp_cyan_bright			= ""
-    let s:sp_white_normal     = ""
-    let s:sp_white_bright     = ""
-    let s:sp_green_normal     = ""
-    let s:sp_yellow_normal    = ""
+    let s:sp_blk_bright			= ""
+    let s:sp_blk_normal			= ""
+    let s:sp_grn_bright			= ""
+    let s:sp_yel_bright    = ""
+    let s:sp_blu_bright			= ""
+    let s:sp_cyn_bright			= ""
+    let s:sp_wht_normal     = ""
+    let s:sp_wht_bright     = ""
+    let s:sp_grn_normal     = ""
+    let s:sp_yel_normal    = ""
     let s:sp_red_bright				= ""
     let s:sp_red_normal       = ""
-    let s:sp_magenta_normal   = ""
-    let s:sp_magenta_bright   = ""
-    let s:sp_blue_normal      = ""
-    let s:sp_cyan_normal      = ""
+    let s:sp_mag_normal   = ""
+    let s:sp_mag_bright   = ""
+    let s:sp_blu_normal      = ""
+    let s:sp_cyn_normal      = ""
 endif
 
 "}}}
@@ -498,135 +498,124 @@ endif
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
 " exe compiled formats
-exe "hi! NonText"        .s:fmt_none   .s:fg_white_normal			.s:bg_black_normal
+exe "hi! NonText"						.s:fmt_none   .s:fg_wht_normal			.s:bg_blk_normal
 
-exe "hi! Normal"         .s:fmt_none   .s:fg_white_normal			.s:bg_back
+exe "hi! Normal"						.s:fmt_none   .s:fg_wht_normal			.s:bg_back
 
-exe "hi! Comment"        .s:fmt_ital   .s:fg_black_bright			.s:bg_none
-"       *Comment         any comment
+exe "hi! Comment"						.s:fmt_ital   .s:fg_blk_bright			.s:bg_none
 
-exe "hi! Constant"       .s:fmt_none   .s:fg_red_bright				.s:bg_none
-"       *Constant        any constant
-"        String          a string constant: "this is a string"
-"        Character       a character constant: 'c', '\n'
-"        Number          a number constant: 234, 0xff
-"        Boolean         a boolean constant: TRUE, false
-"        Float           a floating point constant: 2.3e10
+exe "hi! Constant"					.s:fmt_none   .s:fg_cyn_normal				.s:bg_none
+exe "hi! String"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
+exe "hi! Character"					.s:fmt_none   .s:fg_red_bright				.s:bg_none
+exe "hi! Boolean"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
+exe "hi! Number"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
+exe "hi! Float"							.s:fmt_none   .s:fg_red_bright				.s:bg_none
 
-exe "hi! Identifier"     .s:fmt_none   .s:fg_yellow_bright		.s:bg_none
-"       *Identifier      any variable name
-"        Function        function name (also: methods for classes)
-"
-exe "hi! Statement"      .s:fmt_none   .s:fg_green_normal			.s:bg_none
-"       *Statement       any statement
-"        Conditional     if, then, else, endif, switch, etc.
-"        Repeat          for, do, while, etc.
-"        Label           case, default, etc.
-"        Operator        "sizeof", "+", "*", etc.
-"        Keyword         any other keyword
-"        Exception       try, catch, throw
+"exe "hi! Identifier"				.s:fmt_none   .s:fg_cyn_normal				.s:bg_none
+"exe "hi! Function"					.s:fmt_none   .s:fg_mag_bright		.s:bg_none
 
-exe "hi! PreProc"        .s:fmt_none   .s:fg_green_normal			.s:bg_none
-"       *PreProc         generic Preprocessor
-"        Include         preprocessor #include
-"        Define          preprocessor #define
-"        Macro           same as Define
-"        PreCondit       preprocessor #if, #else, #endif, etc.
+exe "hi! Conditional"				.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Repeat"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Label"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Exception"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
 
-exe "hi! Type"           .s:fmt_none   .s:fg_yellow_bright		.s:bg_none
-"       *Type            int, long, char, etc.
-"        StorageClass    static, register, volatile, etc.
-"        Structure       struct, union, enum, etc.
-"        Typedef         A typedef
+"exe "hi! Noise"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Operator"					.s:fmt_none   .s:fg_mag_bright		.s:bg_none
 
-exe "hi! Special"        .s:fmt_none   .s:fg_red_normal				.s:bg_none
-"       *Special         any special symbol
-"        SpecialChar     special character in a constant
-"        Tag             you can use CTRL-] on this
-"        Delimiter       character that needs attention
-"        SpecialComment  special things inside a comment
-"        Debug           debugging statements
+exe "hi! Include"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Define"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
 
-exe "hi! Underlined"     .s:fmt_none   .s:fg_white_normal			.s:bg_none
-"       *Underlined      text that stands out, HTML links
+"exe "hi! Macro"							.s:fmt_none   .s:fg_red_normal				.s:bg_none
+"exe "hi! PreCondit"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
 
-exe "hi! Ignore"         .s:fmt_none   .s:fg_none							.s:bg_none
-"       *Ignore          left blank, hidden  |hl-Ignore|
+"exe "hi! Type"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Keyword"						.s:fmt_none   .s:fg_mag_normal		.s:bg_none
 
-exe "hi! Error"          .s:fmt_bold   .s:fg_red_normal				.s:bg_none
-"       *Error           any erroneous construct
+exe "hi! Special"						.s:fmt_none   .s:fg_blu_normal				.s:bg_none
+"exe "hi! Structure"					.s:fmt_none   .s:fg_blu_normal				.s:bg_none
+"exe "hi! Statement"					.s:fmt_none   .s:fg_grn_normal			.s:bg_none
 
-exe "hi! Todo"           .s:fmt_bold   .s:fg_blue_bright			.s:bg_none
-"       *Todo            anything that needs extra attention; mostly the
-"                        keywords TODO FIXME and XXX
+"exe "hi! PreProc"						.s:fmt_none   .s:fg_red_normal				.s:bg_none
+"exe "hi! SpecialChar"				.s:fmt_none   .s:fg_red_normal				.s:bg_none
+"exe "hi! Tag"								.s:fmt_none   .s:fg_red_normal				.s:bg_none
+"exe "hi! Delimiter"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
+
+"exe "hi! SpecialComment"		.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+"exe "hi! Debug"							.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+
+exe "hi! Underlined"				.s:fmt_none   .s:fg_wht_normal			.s:bg_none
+exe "hi! Ignore"						.s:fmt_none   .s:fg_none							.s:bg_none
+exe "hi! Error"							.s:fmt_bold   .s:fg_red_normal				.s:bg_none
+exe "hi! Todo"							.s:fmt_bold   .s:fg_blu_bright			.s:bg_none
+"														keywords TODO FIXME and XXX
 "
 "}}}
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! SpecialKey"			.s:fmt_bold   .s:fg_yellow_bright		.s:bg_black_normal
-exe "hi! NonText"					.s:fmt_bold   .s:fg_yellow_bright		.s:bg_none
+exe "hi! SpecialKey"			.s:fmt_bold   .s:fg_yel_bright		.s:bg_blk_normal
+exe "hi! NonText"					.s:fmt_bold   .s:fg_yel_bright		.s:bg_none
 
-exe "hi! StatusLine"			.s:fmt_none   .s:fg_cyan_bright			.s:bg_black_normal .s:fmt_revbb
-exe "hi! StatusLineNC"		.s:fmt_none   .s:fg_yellow_bright		.s:bg_black_normal .s:fmt_revbb
-exe "hi! Visual"					.s:fmt_none   .s:fg_green_bright		.s:bg_black_bright .s:fmt_revbb
-exe "hi! Directory"				.s:fmt_none   .s:fg_blue_normal			.s:bg_none
+exe "hi! StatusLine"			.s:fmt_none   .s:fg_cyn_bright			.s:bg_blk_normal .s:fmt_revbb
+exe "hi! StatusLineNC"		.s:fmt_none   .s:fg_yel_bright		.s:bg_blk_normal .s:fmt_revbb
+exe "hi! Visual"					.s:fmt_none   .s:fg_grn_bright		.s:bg_blk_bright .s:fmt_revbb
+exe "hi! Directory"				.s:fmt_none   .s:fg_blu_normal			.s:bg_none
 exe "hi! ErrorMsg"				.s:fmt_revr   .s:fg_red_normal			.s:bg_none
 exe "hi! IncSearch"				.s:fmt_stnd   .s:fg_red_bright			.s:bg_none
-exe "hi! Search"					.s:fmt_revr   .s:fg_yellow_normal		.s:bg_none
-exe "hi! MoreMsg"					.s:fmt_none   .s:fg_blue_normal			.s:bg_none
-exe "hi! ModeMsg"					.s:fmt_none   .s:fg_blue_normal			.s:bg_none
-exe "hi! LineNr"					.s:fmt_none   .s:fg_black_bright		.s:bg_none
-exe "hi! Question"				.s:fmt_bold   .s:fg_cyan_normal			.s:bg_none
+exe "hi! Search"					.s:fmt_revr   .s:fg_yel_normal		.s:bg_none
+exe "hi! MoreMsg"					.s:fmt_none   .s:fg_blu_normal			.s:bg_none
+exe "hi! ModeMsg"					.s:fmt_none   .s:fg_blu_normal			.s:bg_none
+exe "hi! LineNr"					.s:fmt_none   .s:fg_blk_bright		.s:bg_none
+exe "hi! Question"				.s:fmt_bold   .s:fg_cyn_normal			.s:bg_none
 
 if ( has("gui_running") || &t_Co > 8 )
-  exe "hi! VertSplit"			.s:fmt_none   .s:fg_yellow_bright		.s:bg_yellow_bright
+  exe "hi! VertSplit"			.s:fmt_none   .s:fg_yel_bright		.s:bg_yel_bright
 else
-  exe "hi! VertSplit"			.s:fmt_revbb  .s:fg_yellow_bright		.s:bg_black_normal
+  exe "hi! VertSplit"			.s:fmt_revbb  .s:fg_yel_bright		.s:bg_blk_normal
 endif
 
 exe "hi! Title"						.s:fmt_bold   .s:fg_red_bright			.s:bg_none
-exe "hi! VisualNOS"				.s:fmt_stnd   .s:fg_none						.s:bg_black_normal		.s:fmt_revbb
+exe "hi! VisualNOS"				.s:fmt_stnd   .s:fg_none						.s:bg_blk_normal		.s:fmt_revbb
 exe "hi! WarningMsg"			.s:fmt_bold   .s:fg_red_normal			.s:bg_none
-exe "hi! WildMenu"				.s:fmt_none   .s:fg_white_normal		.s:bg_black_normal		.s:fmt_revbb
-exe "hi! Folded"					.s:fmt_none   .s:fg_blue_bright			.s:bg_none						.s:sp_black_bright
-exe "hi! FoldColumn"			.s:fmt_none   .s:fg_blue_bright			.s:bg_black_normal
+exe "hi! WildMenu"				.s:fmt_none   .s:fg_wht_normal		.s:bg_blk_normal		.s:fmt_revbb
+exe "hi! Folded"					.s:fmt_none   .s:fg_blu_bright			.s:bg_none						.s:sp_blk_bright
+exe "hi! FoldColumn"			.s:fmt_none   .s:fg_blu_bright			.s:bg_blk_normal
 
 if has("gui_running")
-	exe "hi! DiffAdd"       .s:fmt_bold   .s:fg_green_normal		.s:bg_black_normal		.s:sp_green_normal
-	exe "hi! DiffChange"    .s:fmt_bold   .s:fg_yellow_normal		.s:bg_black_normal		.s:sp_yellow_normal
-	exe "hi! DiffDelete"    .s:fmt_bold   .s:fg_red_normal			.s:bg_black_normal
-	exe "hi! DiffText"      .s:fmt_bold   .s:fg_blue_normal			.s:bg_black_normal		.s:sp_blue_normal
+	exe "hi! DiffAdd"       .s:fmt_bold   .s:fg_grn_normal		.s:bg_blk_normal		.s:sp_grn_normal
+	exe "hi! DiffChange"    .s:fmt_bold   .s:fg_yel_normal		.s:bg_blk_normal		.s:sp_yel_normal
+	exe "hi! DiffDelete"    .s:fmt_bold   .s:fg_red_normal			.s:bg_blk_normal
+	exe "hi! DiffText"      .s:fmt_bold   .s:fg_blu_normal			.s:bg_blk_normal		.s:sp_blu_normal
 else
-	exe "hi! DiffAdd"       .s:fmt_none   .s:fg_green_normal		.s:bg_black_normal		.s:sp_green_normal
-	exe "hi! DiffChange"    .s:fmt_none   .s:fg_yellow_normal		.s:bg_black_normal		.s:sp_yellow_normal
-	exe "hi! DiffDelete"    .s:fmt_none   .s:fg_red_normal			.s:bg_black_normal
-	exe "hi! DiffText"      .s:fmt_none   .s:fg_blue_normal			.s:bg_black_normal		.s:sp_blue_normal
+	exe "hi! DiffAdd"       .s:fmt_none   .s:fg_grn_normal		.s:bg_blk_normal		.s:sp_grn_normal
+	exe "hi! DiffChange"    .s:fmt_none   .s:fg_yel_normal		.s:bg_blk_normal		.s:sp_yel_normal
+	exe "hi! DiffDelete"    .s:fmt_none   .s:fg_red_normal			.s:bg_blk_normal
+	exe "hi! DiffText"      .s:fmt_none   .s:fg_blu_normal			.s:bg_blk_normal		.s:sp_blu_normal
 endif
 
-exe "hi! SignColumn"			.s:fmt_none   .s:fg_blue_bright
-exe "hi! Conceal"					.s:fmt_none   .s:fg_blue_normal			.s:bg_none
+exe "hi! SignColumn"			.s:fmt_none   .s:fg_blu_bright
+exe "hi! Conceal"					.s:fmt_none   .s:fg_blu_normal			.s:bg_none
 exe "hi! SpellBad"				.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_red_normal
-exe "hi! SpellCap"				.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_magenta_bright
-exe "hi! SpellRare"				.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_cyan_normal
-exe "hi! SpellLocal"			.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_yellow_normal
-exe "hi! Pmenu"						.s:fmt_none   .s:fg_black_bright		.s:bg_black_normal		.s:fmt_revbb
-exe "hi! PmenuSel"				.s:fmt_none   .s:fg_blue_normal			.s:bg_green_bright		.s:fmt_revbb
-exe "hi! PmenuSbar"				.s:fmt_none   .s:fg_white_normal		.s:bg_blue_bright			.s:fmt_revbb
-exe "hi! PmenuThumb"			.s:fmt_none   .s:fg_blue_bright			.s:bg_black_bright		.s:fmt_revbb
-exe "hi! TabLine"					.s:fmt_undr   .s:fg_blue_bright			.s:bg_black_normal		.s:sp_blue_bright
-exe "hi! TabLineFill"			.s:fmt_undr   .s:fg_blue_bright			.s:bg_black_normal		.s:sp_blue_bright
-exe "hi! TabLineSel"			.s:fmt_undr   .s:fg_green_bright		.s:bg_white_normal		.s:sp_blue_bright			.s:fmt_revbbu
-exe "hi! CursorColumn"		.s:fmt_none   .s:fg_none						.s:bg_black_normal
-exe "hi! CursorLine"			.s:fmt_uopt   .s:fg_none						.s:bg_black_normal		.s:sp_cyan_bright
-exe "hi! ColorColumn"			.s:fmt_none   .s:fg_none						.s:bg_black_normal
-exe "hi! Cursor"					.s:fmt_none   .s:fg_black_bright		.s:bg_blue_bright
+exe "hi! SpellCap"				.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_mag_bright
+exe "hi! SpellRare"				.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_cyn_normal
+exe "hi! SpellLocal"			.s:fmt_curl   .s:fg_none						.s:bg_none						.s:sp_yel_normal
+exe "hi! Pmenu"						.s:fmt_none   .s:fg_blk_bright		.s:bg_blk_normal		.s:fmt_revbb
+exe "hi! PmenuSel"				.s:fmt_none   .s:fg_blu_normal			.s:bg_grn_bright		.s:fmt_revbb
+exe "hi! PmenuSbar"				.s:fmt_none   .s:fg_wht_normal		.s:bg_blu_bright			.s:fmt_revbb
+exe "hi! PmenuThumb"			.s:fmt_none   .s:fg_blu_bright			.s:bg_blk_bright		.s:fmt_revbb
+exe "hi! TabLine"					.s:fmt_undr   .s:fg_blu_bright			.s:bg_blk_normal		.s:sp_blu_bright
+exe "hi! TabLineFill"			.s:fmt_undr   .s:fg_blu_bright			.s:bg_blk_normal		.s:sp_blu_bright
+exe "hi! TabLineSel"			.s:fmt_undr   .s:fg_grn_bright		.s:bg_wht_normal		.s:sp_blu_bright			.s:fmt_revbbu
+exe "hi! CursorColumn"		.s:fmt_none   .s:fg_none						.s:bg_blk_normal
+exe "hi! CursorLine"			.s:fmt_uopt   .s:fg_none						.s:bg_blk_normal		.s:sp_cyn_bright
+exe "hi! ColorColumn"			.s:fmt_none   .s:fg_none						.s:bg_blk_normal
+exe "hi! Cursor"					.s:fmt_none   .s:fg_blk_bright		.s:bg_blu_bright
 hi! link lCursor Cursor
-exe "hi! MatchParen"			.s:fmt_bold   .s:fg_blue_normal		.s:bg_black_bright
+exe "hi! MatchParen"			.s:fmt_bold   .s:fg_blu_normal		.s:bg_blk_bright
 
 "}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
-"exe "hi! vimLineComment" . s:fg_green_bright .s:bg_none   .s:fmt_ital
+"exe "hi! vimLineComment" . s:fg_grn_bright .s:bg_none   .s:fmt_ital
 "hi! link vimComment Comment
 "hi! link vimLineComment Comment
 hi! link vimVar Identifier
@@ -635,28 +624,28 @@ hi! link vimUserFunc Function
 hi! link helpSpecial Special
 hi! link vimSet Normal
 hi! link vimSetEqual Normal
-exe "hi! vimCommentString"  .s:fmt_undi    .s:fg_black_bright			.s:bg_none
-exe "hi! vimCommand"        .s:fmt_none    .s:fg_yellow_normal		.s:bg_none
-exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blue_normal			.s:bg_none
-exe "hi! helpExample"       .s:fmt_none    .s:fg_cyan_bright			.s:bg_none
-exe "hi! helpOption"        .s:fmt_none    .s:fg_cyan_normal			.s:bg_none
-exe "hi! helpNote"          .s:fmt_none    .s:fg_magenta_normal		.s:bg_none
-exe "hi! helpVim"           .s:fmt_none    .s:fg_magenta_normal		.s:bg_none
-exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blue_normal			.s:bg_none
-exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_green_normal			.s:bg_none
-exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_yellow_bright		.s:bg_none
-exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yellow_normal		.s:bg_none
-exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyan_normal			.s:bg_none
-exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue_normal			.s:bg_none
-exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue_normal			.s:bg_none
-exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue_normal			.s:bg_none
+exe "hi! vimCommentString"  .s:fmt_undi    .s:fg_blk_bright			.s:bg_none
+exe "hi! vimCommand"        .s:fmt_none    .s:fg_yel_normal		.s:bg_none
+exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blu_normal			.s:bg_none
+exe "hi! helpExample"       .s:fmt_none    .s:fg_cyn_bright			.s:bg_none
+exe "hi! helpOption"        .s:fmt_none    .s:fg_cyn_normal			.s:bg_none
+exe "hi! helpNote"          .s:fmt_none    .s:fg_mag_normal		.s:bg_none
+exe "hi! helpVim"           .s:fmt_none    .s:fg_mag_normal		.s:bg_none
+exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blu_normal			.s:bg_none
+exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_grn_normal			.s:bg_none
+exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_yel_bright		.s:bg_none
+exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yel_normal		.s:bg_none
+exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyn_normal			.s:bg_none
+exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blu_normal			.s:bg_none
+exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blu_normal			.s:bg_none
+exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blu_normal			.s:bg_none
 "}}}
 " diff highlighting "{{{
 " ---------------------------------------------------------------------
 hi! link diffAdded Statement
 "hi! link diffLine Identifier
 
-exe "hi! diffLine"          .s:fmt_none    .s:fg_black_bright			.s:bg_yellow_bright
+exe "hi! diffLine"          .s:fmt_none    .s:fg_blk_bright			.s:bg_yel_bright
 "}}}
 " git & gitcommit highlighting "{{{
 "git
@@ -681,26 +670,26 @@ exe "hi! diffLine"          .s:fmt_none    .s:fg_black_bright			.s:bg_yellow_bri
 "exe "hi! gitDiffRemoved"
 "gitcommit
 "exe "hi! gitcommitSummary"      
-exe "hi! gitcommitComment"      .s:fmt_ital     .s:fg_green_bright    .s:bg_none
+exe "hi! gitcommitComment"      .s:fmt_ital     .s:fg_grn_bright    .s:bg_none
 hi! link gitcommitUntracked gitcommitComment
 hi! link gitcommitDiscarded gitcommitComment
 hi! link gitcommitSelected  gitcommitComment
-exe "hi! gitcommitUnmerged"     .s:fmt_bold     .s:fg_green_normal     .s:bg_none
-exe "hi! gitcommitOnBranch"     .s:fmt_bold     .s:fg_green_bright    .s:bg_none
-exe "hi! gitcommitBranch"       .s:fmt_bold     .s:fg_magenta_normal   .s:bg_none
+exe "hi! gitcommitUnmerged"     .s:fmt_bold     .s:fg_grn_normal     .s:bg_none
+exe "hi! gitcommitOnBranch"     .s:fmt_bold     .s:fg_grn_bright    .s:bg_none
+exe "hi! gitcommitBranch"       .s:fmt_bold     .s:fg_mag_normal   .s:bg_none
 hi! link gitcommitNoBranch gitcommitBranch
 exe "hi! gitcommitDiscardedType".s:fmt_none     .s:fg_red_normal       .s:bg_none
-exe "hi! gitcommitSelectedType" .s:fmt_none     .s:fg_green_normal     .s:bg_none
+exe "hi! gitcommitSelectedType" .s:fmt_none     .s:fg_grn_normal     .s:bg_none
 "exe "hi! gitcommitUnmergedType"
 "exe "hi! gitcommitType"
 "exe "hi! gitcommitNoChanges"
 "exe "hi! gitcommitHeader"
-exe "hi! gitcommitHeader"       .s:fmt_none     .s:fg_green_bright    .s:bg_none
-exe "hi! gitcommitUntrackedFile".s:fmt_bold     .s:fg_cyan_normal      .s:bg_none
+exe "hi! gitcommitHeader"       .s:fmt_none     .s:fg_grn_bright    .s:bg_none
+exe "hi! gitcommitUntrackedFile".s:fmt_bold     .s:fg_cyn_normal      .s:bg_none
 exe "hi! gitcommitDiscardedFile".s:fmt_bold     .s:fg_red_normal       .s:bg_none
-exe "hi! gitcommitSelectedFile" .s:fmt_bold     .s:fg_green_normal     .s:bg_none
-exe "hi! gitcommitUnmergedFile" .s:fmt_bold     .s:fg_yellow_normal    .s:bg_none
-exe "hi! gitcommitFile"         .s:fmt_bold     .s:fg_blue_bright     .s:bg_none
+exe "hi! gitcommitSelectedFile" .s:fmt_bold     .s:fg_grn_normal     .s:bg_none
+exe "hi! gitcommitUnmergedFile" .s:fmt_bold     .s:fg_yel_normal    .s:bg_none
+exe "hi! gitcommitFile"         .s:fmt_bold     .s:fg_blu_bright     .s:bg_none
 hi! link gitcommitDiscardedArrow gitcommitDiscardedFile
 hi! link gitcommitSelectedArrow  gitcommitSelectedFile
 hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
@@ -710,108 +699,119 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 " }}}
 " javascript highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! javascriptOpSymbol"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptOpSymbols"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptInvalidOp"								.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptSpreadOp"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptEndColons"								.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptObjectLabelColon"        .s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptComma"										.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptBraces"									.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptBrackets"								.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptParens"									.s:fmt_none		.s:fg_green_bright		.s:bg_none
-exe "hi! javascriptArrowFunc"								.s:fmt_none		.s:fg_blue_normal			.s:bg_none
+exe "hi! jsGlobalObjects"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsGlobalNodeObjects"								.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! javascriptIdentifier"							.s:fmt_none		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptVariable"								.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptCommentTodo"							.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptFuncKeyword"							.s:fmt_none		.s:fg_yellow_bright 	.s:bg_none
+exe "hi! jsExtendsKeyword"									.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! jsImport"													.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsExport"													.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsModuleAs"												.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsFrom"														.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsStorageClass"										.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! jsReturn"													.s:fmt_none		.s:fg_grn_normal		.s:bg_none
 
-exe "hi! javascriptPrototype"								.s:fmt_none		.s:fg_magenta_bright	.s:bg_none
+exe "hi! jsExportDefault"										.s:fmt_none		.s:fg_blu_bright		.s:bg_none
 
-exe "hi! javascriptReserved"								.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptReturn"									.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptYield"										.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptConditional"							.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptConditionalElse"					.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptRepeat"									.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptSwitch"									.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptStatementKeyword"				.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptBranch"									.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptCase"										.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptOperator"								.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptDotNotation"							.s:fmt_none		.s:fg_blue_normal			.s:bg_none
+exe "hi! jsOperator"												.s:fmt_none		.s:fg_grn_normal		.s:bg_none
+exe "hi! jsOperatorSign"										.s:fmt_none		.s:fg_mag_normal		.s:bg_none
 
-"exe "hi! javascriptIdentifierName"					.s:fmt_none		.s:fg_cyan_bright			.s:bg_none
-exe "hi! javascriptString"									.s:fmt_none		.s:fg_red_bright			.s:bg_none
-exe "hi! javascriptNumber"									.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptBoolean"									.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptNull"										.s:fmt_none		.s:fg_yellow_normal		.s:bg_none
+exe "hi! jsConditional"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsRepeat"													.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsDo"															.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsTry"															.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsFinally"													.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsCatch"														.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsException"												.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsAsyncKeyword"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsExceptions"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! javascriptDebugger"								.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptTry"											.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptExceptions"							.s:fmt_none		.s:fg_red_normal			.s:bg_none
+exe "hi! jsClassBraces"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsFuncBraces"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsIfElseBraces"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsTryCatchBraces"									.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsFinallyBraces"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsSwitchBraces"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsRepeatBraces"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsDestructuringBraces"							.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsObjectBraces"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsBraces"													.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsModuleBraces"										.s:fmt_none		.s:fg_mag_bright		.s:bg_none
 
-exe "hi! javascriptRegexpString"						.s:fmt_none		.s:fg_red_bright			.s:bg_none
-exe "hi! javascriptTemplate"								.s:fmt_none		.s:fg_red_bright			.s:bg_none
-exe "hi! javascriptTemplateSubstitution"		.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
+exe "hi! jsParens"													.s:fmt_none		.s:fg_wht_normal		.s:bg_none
+exe "hi! jsParensDecorator"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsParensIfElse"										.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsParensRepeat"										.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsParensSwitch"										.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsParensCatch"											.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsFuncParens"											.s:fmt_none		.s:fg_blu_bright		.s:bg_none
 
-exe "hi! javascriptClassKeyword"						.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptClassSuper"							.s:fmt_none		.s:fg_red_normal			.s:bg_none
-exe "hi! javascriptClassName"								.s:fmt_ital		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptClassSuperName"					.s:fmt_ital		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptClassExtends"						.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptClassExtendsNew"					.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptClassStatic"							.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
+exe "hi! jsBracket"													.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! javascriptImport"									.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptExport"									.s:fmt_none		.s:fg_green_normal		.s:bg_none
+exe "hi! jsBuiltins"												.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsFutureKeys"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! javascriptAsyncFuncKeyword"				.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptAwaitFuncKeyword"				.s:fmt_none		.s:fg_green_normal		.s:bg_none
+exe "hi! jsObjectKey"												.s:fmt_none		.s:fg_grn_bright		.s:bg_none
+exe "hi! jsObjectKeyString"									.s:fmt_none		.s:fg_red_bright		.s:bg_none
 
-exe "hi! javascriptObjectLabel"							.s:fmt_none		.s:fg_blue_bright			.s:bg_none
+exe "hi! jsClassKeyword"										.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! jsFunction"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! jsSpreadExpression"								.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsRestExpression"									.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsArrowFunction"										.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! jsTernaryIf"												.s:fmt_none		.s:fg_red_normal		.s:bg_none
 
+exe "hi! jsFuncCall"												.s:fmt_none		.s:fg_wht_normal		.s:bg_none
 
-"exe "hi! javascriptMethod"									.s:fmt_none		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptMethodName"							.s:fmt_none		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptObjectMethodName"				.s:fmt_none		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptMethodAccessor"					.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptMethodAccessorWords"			.s:fmt_none		.s:fg_green_normal		.s:bg_none
+exe "hi! jsFuncName"												.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! jsObjectFuncName"									.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! jsClassFuncName"										.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! jsFunctionKey"											.s:fmt_none		.s:fg_blu_bright		.s:bg_none
 
-exe "hi! javascriptAfterIdentifier"					.s:fmt_none		.s:fg_none						.s:bg_none
-exe "hi! javascriptIdentifierName"					.s:fmt_none		.s:fg_none						.s:bg_none
-"exe "hi! javascriptLabel"									.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+exe "hi! jsFuncArgs"												.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+exe "hi! jsArrowFuncArgs"										.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+exe "hi! jsPrototype"												.s:fmt_none		.s:fg_mag_bright		.s:bg_none
 
-exe "hi! javascriptFuncName"								.s:fmt_ital		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptFuncArg"									.s:fmt_none		.s:fg_green_normal		.s:bg_none
-"exe "hi! javascriptFuncCall"								.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+exe "hi! jsTemplateString"									.s:fmt_none		.s:fg_red_bright		.s:bg_none
 
+exe "hi! jsTemplateExpression"							.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! javascriptComment"									.s:fmt_ital		.s:fg_black_bright		.s:bg_none
-exe "hi! javascriptLineComment"							.s:fmt_ital		.s:fg_black_bright		.s:bg_none
-exe "hi! javascriptDocComment"							.s:fmt_ital		.s:fg_black_bright		.s:bg_none
+exe "hi! jsNull"														.s:fmt_none		.s:fg_yel_normal		.s:bg_none
+exe "hi! jsNan"															.s:fmt_none		.s:fg_yel_normal		.s:bg_none
+exe "hi! jsUndefined"												.s:fmt_none		.s:fg_yel_normal		.s:bg_none
+exe "hi! jsString"													.s:fmt_none		.s:fg_red_bright		.s:bg_none
+exe "hi! jsNumber"													.s:fmt_none		.s:fg_red_normal		.s:bg_none
+exe "hi! jsFloat"														.s:fmt_none		.s:fg_red_normal		.s:bg_none
 
-exe "hi! javascriptCodeComment"							.s:fmt_none		.s:fg_yellow_bright		.s:bg_none
-exe "hi! javascriptBoldComment"							.s:fmt_none		.s:fg_green_normal		.s:bg_none
+exe "hi! jsThis"														.s:fmt_none		.s:fg_blu_normal		.s:bg_none
+exe "hi! jsArguments"												.s:fmt_none		.s:fg_blu_normal		.s:bg_none
+exe "hi! jsAsyncKeyword"										.s:fmt_none		.s:fg_blu_normal		.s:bg_none
+"exe "hi! jsForAwait"												.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
-exe "hi! javascriptDocTags"									.s:fmt_none		.s:fg_cyan_normal			.s:bg_none
-exe "hi! javascriptDocNotation"							.s:fmt_none		.s:fg_cyan_normal			.s:bg_none
-exe "hi! javascriptDocName"									.s:fmt_none		.s:fg_blue_normal			.s:bg_none
-exe "hi! javascriptDocParamName"						.s:fmt_none		.s:fg_green_normal		.s:bg_none
-exe "hi! javascriptDocParamType"						.s:fmt_none		.s:fg_red_bright			.s:bg_none
-exe "hi! javascriptDocNamedParamType"				.s:fmt_none		.s:fg_red_bright			.s:bg_none
+exe "hi! jsComment"													.s:fmt_ital		.s:fg_blk_bright		.s:bg_none
+"exe "hi! jsDocComment"											.s:fmt_ital		.s:fg_blk_bright		.s:bg_none
+
+exe "hi! jsCodeComment"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsBoldComment"											.s:fmt_none		.s:fg_grn_normal		.s:bg_none
+
+exe "hi! jsDocTags"													.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsDocNotation"											.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! jsDocName"													.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! jsDocParamName"										.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! jsDocParamType"										.s:fmt_none		.s:fg_red_bright		.s:bg_none
+exe "hi! jsDocNamedParamType"								.s:fmt_none		.s:fg_red_bright		.s:bg_none
+"
+"
 "}}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! htmlTag"								.s:fmt_none .s:fg_green_bright .s:bg_none
-exe "hi! htmlEndTag"						.s:fmt_none .s:fg_green_bright .s:bg_none
-exe "hi! htmlLink"							.s:fmt_none .s:fg_green_bright .s:bg_none
-exe "hi! htmlTagN"							.s:fmt_bold .s:fg_cyan_bright  .s:bg_none
-exe "hi! htmlTagName"						.s:fmt_bold .s:fg_blue_normal   .s:bg_none
-exe "hi! htmlSpecialTagName"		.s:fmt_ital .s:fg_blue_normal   .s:bg_none
-exe "hi! htmlArg"								.s:fmt_none .s:fg_yellow_bright .s:bg_none
-exe "hi! javaScript"						.s:fmt_none .s:fg_yellow_normal .s:bg_none
+exe "hi! htmlTag"								.s:fmt_none .s:fg_grn_bright .s:bg_none
+exe "hi! htmlEndTag"						.s:fmt_none .s:fg_grn_bright .s:bg_none
+exe "hi! htmlLink"							.s:fmt_none .s:fg_grn_bright .s:bg_none
+exe "hi! htmlTagN"							.s:fmt_bold .s:fg_cyn_bright  .s:bg_none
+exe "hi! htmlTagName"						.s:fmt_bold .s:fg_blu_normal   .s:bg_none
+exe "hi! htmlSpecialTagName"		.s:fmt_ital .s:fg_blu_normal   .s:bg_none
+exe "hi! htmlArg"								.s:fmt_none .s:fg_yel_bright .s:bg_none
+exe "hi! javaScript"						.s:fmt_none .s:fg_yel_normal .s:bg_none
 "}}}
 " css highlighting "{{{
 " ---------------------------------------------------------------------
@@ -828,98 +828,98 @@ exe "hi! javaScript"						.s:fmt_none .s:fg_yellow_normal .s:bg_none
 "exe "hi! cssValueFrequency"		.s:fmt_none		.s:fg_red_bright		.s:bg_none
 "exe "hi! cssUnitDecorators"		.s:fmt_none		.s:fg_red_bright		.s:bg_none
 
-exe "hi! cssColor"							.s:fmt_none		.s:fg_blue_bright		.s:bg_none
-exe "hi! cssColorHex"						.s:fmt_none		.s:fg_blue_bright		.s:bg_none
-exe "hi! cssFontAttr"						.s:fmt_none		.s:fg_blue_bright		.s:bg_none
+exe "hi! cssColor"							.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! cssColorHex"						.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! cssFontAttr"						.s:fmt_none		.s:fg_blu_bright		.s:bg_none
 
-exe "hi! cssAttr"								.s:fmt_none		.s:fg_cyan_normal		.s:bg_none
-exe "hi! cssProp"								.s:fmt_none		.s:fg_yellow_bright	.s:bg_none
+exe "hi! cssAttr"								.s:fmt_none		.s:fg_cyn_normal		.s:bg_none
+exe "hi! cssProp"								.s:fmt_none		.s:fg_yel_bright	.s:bg_none
 
 "exe "hi! cssDimensionAttr"			.s:fmt_none		.s:fg_red_bright		.s:bg_none
-"exe "hi! cssColorProp"					.s:fmt_none		.s:fg_blue_bright		.s:bg_none
+"exe "hi! cssColorProp"					.s:fmt_none		.s:fg_blu_bright		.s:bg_none
 
-"exe "hi! cssBackgroundAttr"		.s:fmt_none		.s:fg_yellow_bright	.s:bg_none
-"exe "hi! cssBorderProp"				.s:fmt_none		.s:fg_yellow_bright	.s:bg_none
-"exe "hi! cssFlexibleBoxProp"		.s:fmt_none		.s:fg_yellow_bright	.s:bg_none
+"exe "hi! cssBackgroundAttr"		.s:fmt_none		.s:fg_yel_bright	.s:bg_none
+"exe "hi! cssBorderProp"				.s:fmt_none		.s:fg_yel_bright	.s:bg_none
+"exe "hi! cssFlexibleBoxProp"		.s:fmt_none		.s:fg_yel_bright	.s:bg_none
 
-exe "hi! cssClassName"					.s:fmt_none		.s:fg_blue_normal		.s:bg_none
-exe "hi! cssClassNameDot"				.s:fmt_none		.s:fg_blue_normal		.s:bg_none
+exe "hi! cssClassName"					.s:fmt_none		.s:fg_blu_normal		.s:bg_none
+exe "hi! cssClassNameDot"				.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
-exe "hi! cssIdentifier"					.s:fmt_none		.s:fg_green_normal	.s:bg_none
+exe "hi! cssIdentifier"					.s:fmt_none		.s:fg_grn_normal	.s:bg_none
 
-exe "hi! cssTodo"								.s:fmt_none		.s:fg_magenta_normal .s:bg_none
+exe "hi! cssTodo"								.s:fmt_none		.s:fg_mag_normal .s:bg_none
 
 "}}}
 " sass highlighting "{{{
 " ---------------------------------------------------------------------
 
-exe "hi! sassClassChar"			.s:fmt_none		.s:fg_blue_normal		.s:bg_none
-exe "hi! sassClass"					.s:fmt_none		.s:fg_blue_normal		.s:bg_none
+exe "hi! sassClassChar"			.s:fmt_none		.s:fg_blu_normal		.s:bg_none
+exe "hi! sassClass"					.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
-exe "hi! sassIdChar"				.s:fmt_none		.s:fg_green_normal	.s:bg_none
-exe "hi! sassId"						.s:fmt_none		.s:fg_green_normal	.s:bg_none
+exe "hi! sassIdChar"				.s:fmt_none		.s:fg_grn_normal	.s:bg_none
+exe "hi! sassId"						.s:fmt_none		.s:fg_grn_normal	.s:bg_none
 
 "hi def link sassImportant  Special
 
-"exe "hi! sassString"												.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassValue"													.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassDefinition"										.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassString"												.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassValue"													.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassDefinition"										.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassSelector"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassAttribute"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassSelectors"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassSelector"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassAttribute"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassSelectors"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassProperty"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassProperty"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassAttributeWithNestedDefinition"	.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassNestedDefinition"							.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassAttributeWithNestedDefinition"	.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassNestedDefinition"							.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassNestedProperty"								.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassNestedProperty"								.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassVariable"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassVariableAssignment"						.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassVariableValue"									.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassVariable"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassVariableAssignment"						.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassVariableValue"									.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassNull"													.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassBoolean"												.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassNull"													.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassBoolean"												.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassInclude"												.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
-"exe "hi! sassContent"												.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
-"exe "hi! sassReturn"												.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
-"exe "hi! sassExtend"												.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
-"exe "hi! sassOptional"											.s:fmt_none		.s:fg_magenta_normal			.s:bg_none
-"exe "hi! sassImportant"											.s:fmt_none		.s:fg_magenta_normal			.s:bg_none
-"exe "hi! sassImport"												.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
-"exe "hi! sassImportList"										.s:fmt_none		.s:fg_magenta_normal		.s:bg_none
+"exe "hi! sassInclude"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! sassContent"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! sassReturn"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! sassExtend"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! sassOptional"											.s:fmt_none		.s:fg_mag_normal			.s:bg_none
+"exe "hi! sassImportant"											.s:fmt_none		.s:fg_mag_normal			.s:bg_none
+"exe "hi! sassImport"												.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! sassImportList"										.s:fmt_none		.s:fg_mag_normal		.s:bg_none
 
-"exe "hi! sassSelectorName"									.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassSelectorChar"									.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
-"exe "hi! sassAmpersand"											.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassSelectorName"									.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassSelectorChar"									.s:fmt_none		.s:fg_mag_normal	.s:bg_none
+"exe "hi! sassAmpersand"											.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassControl"												.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassControl"												.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 
-"exe "hi! sassComment"												.s:fmt_none		.s:fg_black_bright		.s:bg_none
-"exe "hi! sassStickyCommentChar"							.s:fmt_none		.s:fg_black_bright		.s:bg_none
-"exe "hi! sassTodo"													.s:fmt_none		.s:fg_magenta_normal	.s:bg_none
+"exe "hi! sassComment"												.s:fmt_none		.s:fg_blk_bright		.s:bg_none
+"exe "hi! sassStickyCommentChar"							.s:fmt_none		.s:fg_blk_bright		.s:bg_none
+"exe "hi! sassTodo"													.s:fmt_none		.s:fg_mag_normal	.s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! perlHered_normaloc"    . s:fg_cyan_bright  .s:bg_back   .s:fmt_none
-exe "hi! perlVarPlain"   . s:fg_yellow_normal .s:bg_back   .s:fmt_none
-exe "hi! perlStatementFileDesc". s:fg_cyan_normal.s:bg_back.s:fmt_none
+exe "hi! perlHered_normaloc"    . s:fg_cyn_bright  .s:bg_back   .s:fmt_none
+exe "hi! perlVarPlain"   . s:fg_yel_normal .s:bg_back   .s:fmt_none
+exe "hi! perlStatementFileDesc". s:fg_cyn_normal.s:bg_back.s:fmt_none
 
 "}}}
 " tex highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! texStatement"   . s:fg_cyan_normal   .s:bg_back   .s:fmt_none
-exe "hi! texMathZoneX"   . s:fg_yellow_normal .s:bg_back   .s:fmt_none
-exe "hi! texMathMatcher" . s:fg_yellow_normal .s:bg_back   .s:fmt_none
-exe "hi! texMathMatcher" . s:fg_yellow_normal .s:bg_back   .s:fmt_none
-exe "hi! texRefLabel"    . s:fg_yellow_normal .s:bg_back   .s:fmt_none
+exe "hi! texStatement"   . s:fg_cyn_normal   .s:bg_back   .s:fmt_none
+exe "hi! texMathZoneX"   . s:fg_yel_normal .s:bg_back   .s:fmt_none
+exe "hi! texMathMatcher" . s:fg_yel_normal .s:bg_back   .s:fmt_none
+exe "hi! texMathMatcher" . s:fg_yel_normal .s:bg_back   .s:fmt_none
+exe "hi! texRefLabel"    . s:fg_yel_normal .s:bg_back   .s:fmt_none
 "}}}
 " ruby highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! rubyDefine"     . s:fg_cyan_bright  .s:bg_back   .s:fmt_bold
+exe "hi! rubyDefine"     . s:fg_cyn_bright  .s:bg_back   .s:fmt_bold
 "rubyInclude
 "rubySharpBang
 "rubyAccess
@@ -956,22 +956,22 @@ let hs_highlight_delimiters=1
 
 exe "hi! cPreCondit". s:fg_red_bright.s:bg_none   .s:fmt_none
 
-exe "hi! VarId"    . s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! ConId"    . s:fg_yellow_normal .s:bg_none   .s:fmt_none
-exe "hi! hsImport" . s:fg_magenta_normal.s:bg_none   .s:fmt_none
-exe "hi! hsString" . s:fg_yellow_bright .s:bg_none   .s:fmt_none
+exe "hi! VarId"    . s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! ConId"    . s:fg_yel_normal .s:bg_none   .s:fmt_none
+exe "hi! hsImport" . s:fg_mag_normal.s:bg_none   .s:fmt_none
+exe "hi! hsString" . s:fg_yel_bright .s:bg_none   .s:fmt_none
 
-exe "hi! hsStructure"        . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hs_hlFunctionName"  . s:fg_blue_normal   .s:bg_none
-exe "hi! hsStatement"        . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hsImportLabel"      . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hs_OpFunctionName"  . s:fg_yellow_normal .s:bg_none   .s:fmt_none
+exe "hi! hsStructure"        . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hs_hlFunctionName"  . s:fg_blu_normal   .s:bg_none
+exe "hi! hsStatement"        . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hsImportLabel"      . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hs_OpFunctionName"  . s:fg_yel_normal .s:bg_none   .s:fmt_none
 exe "hi! hs_DeclareFunction" . s:fg_red_bright .s:bg_none   .s:fmt_none
-exe "hi! hsVarSym"           . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hsType"             . s:fg_yellow_normal .s:bg_none   .s:fmt_none
-exe "hi! hsTypedef"          . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hsModuleName"       . s:fg_green_normal  .s:bg_none   .s:fmt_undr
-exe "hi! hsModuleStartLabel" . s:fg_magenta_normal.s:bg_none   .s:fmt_none
+exe "hi! hsVarSym"           . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hsType"             . s:fg_yel_normal .s:bg_none   .s:fmt_none
+exe "hi! hsTypedef"          . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hsModuleName"       . s:fg_grn_normal  .s:bg_none   .s:fmt_undr
+exe "hi! hsModuleStartLabel" . s:fg_mag_normal.s:bg_none   .s:fmt_none
 hi! link hsImportParams      Delimiter
 hi! link hsDelimTypeExport   Delimiter
 hi! link hsModuleStartLabel  hsStructure
@@ -979,35 +979,35 @@ hi! link hsModuleWhereLabel  hsModuleStartLabel
 
 " following is for the haskell-conceal plugin
 " the first two items don't have an impact, but better safe
-exe "hi! hsNiceOperator"     . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! hsniceoperator"     . s:fg_cyan_normal   .s:bg_none   .s:fmt_none
+exe "hi! hsNiceOperator"     . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! hsniceoperator"     . s:fg_cyn_normal   .s:bg_none   .s:fmt_none
 
 "}}}
 " pandoc markdown syntax highlighting "{{{
 " ---------------------------------------------------------------------
 
 "PandocHiLink pandocNormalBlock
-exe "hi! pandocTitleBlock"               .s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocTitleBlockTitle"          .s:fg_blue_normal   .s:bg_none   .s:fmt_bold
-exe "hi! pandocTitleComment"             .s:fg_blue_normal   .s:bg_none   .s:fmt_bold
-exe "hi! pandocComment"                  .s:fg_green_bright .s:bg_none   .s:fmt_ital
-exe "hi! pandocVerbatimBlock"            .s:fg_yellow_normal .s:bg_none   .s:fmt_none
+exe "hi! pandocTitleBlock"               .s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocTitleBlockTitle"          .s:fg_blu_normal   .s:bg_none   .s:fmt_bold
+exe "hi! pandocTitleComment"             .s:fg_blu_normal   .s:bg_none   .s:fmt_bold
+exe "hi! pandocComment"                  .s:fg_grn_bright .s:bg_none   .s:fmt_ital
+exe "hi! pandocVerbatimBlock"            .s:fg_yel_normal .s:bg_none   .s:fmt_none
 hi! link pandocVerbatimBlockDeep         pandocVerbatimBlock
 hi! link pandocCodeBlock                 pandocVerbatimBlock
 hi! link pandocCodeBlockDelim            pandocVerbatimBlock
-exe "hi! pandocBlockQuote"               .s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocBlockQuoteLeader1"        .s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocBlockQuoteLeader2"        .s:fg_cyan_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocBlockQuoteLeader3"        .s:fg_yellow_normal .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuote"               .s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader1"        .s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader2"        .s:fg_cyn_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader3"        .s:fg_yel_normal .s:bg_none   .s:fmt_none
 exe "hi! pandocBlockQuoteLeader4"        .s:fg_red_normal    .s:bg_none   .s:fmt_none
-exe "hi! pandocBlockQuoteLeader5"        .s:fg_blue_bright  .s:bg_none   .s:fmt_none
-exe "hi! pandocBlockQuoteLeader6"        .s:fg_green_bright .s:bg_none   .s:fmt_none
-exe "hi! pandocListMarker"               .s:fg_magenta_normal.s:bg_none   .s:fmt_none
-exe "hi! pandocListReference"            .s:fg_magenta_normal.s:bg_none   .s:fmt_undr
+exe "hi! pandocBlockQuoteLeader5"        .s:fg_blu_bright  .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader6"        .s:fg_grn_bright .s:bg_none   .s:fmt_none
+exe "hi! pandocListMarker"               .s:fg_mag_normal.s:bg_none   .s:fmt_none
+exe "hi! pandocListReference"            .s:fg_mag_normal.s:bg_none   .s:fmt_undr
 
 " Definitions
 " ---------------------------------------------------------------------
-let s:fg_pdef = s:fg_magenta_bright
+let s:fg_pdef = s:fg_mag_bright
 exe "hi! pandocDefinitionBlock"              .s:fg_pdef  .s:bg_none  .s:fmt_none
 exe "hi! pandocDefinitionTerm"               .s:fg_pdef  .s:bg_none  .s:fmt_stnd
 exe "hi! pandocDefinitionIndctr"             .s:fg_pdef  .s:bg_none  .s:fmt_bold
@@ -1023,13 +1023,13 @@ exe "hi! pandocSubscriptDefinition"          .s:fg_pdef  .s:bg_none  .s:fmt_none
 
 " Tables
 " ---------------------------------------------------------------------
-let s:fg_ptable = s:fg_blue_normal
+let s:fg_ptable = s:fg_blu_normal
 exe "hi! pandocTable"                        .s:fg_ptable.s:bg_none  .s:fmt_none
 exe "hi! pandocTableStructure"               .s:fg_ptable.s:bg_none  .s:fmt_none
 hi! link pandocTableStructureTop             pandocTableStructre
 hi! link pandocTableStructureEnd             pandocTableStructre
-exe "hi! pandocTableZebraLight"              .s:fg_ptable.s:bg_black_bright.s:fmt_none
-exe "hi! pandocTableZebraDark"               .s:fg_ptable.s:bg_black_normal.s:fmt_none
+exe "hi! pandocTableZebraLight"              .s:fg_ptable.s:bg_blk_bright.s:fmt_none
+exe "hi! pandocTableZebraDark"               .s:fg_ptable.s:bg_blk_normal.s:fmt_none
 exe "hi! pandocEmphasisTable"                .s:fg_ptable.s:bg_none  .s:fmt_ital
 exe "hi! pandocEmphasisNestedTable"          .s:fg_ptable.s:bg_none  .s:fmt_bldi
 exe "hi! pandocStrongEmphasisTable"          .s:fg_ptable.s:bg_none  .s:fmt_bold
@@ -1044,7 +1044,7 @@ exe "hi! pandocSubscriptTable"               .s:fg_ptable.s:bg_none  .s:fmt_none
 " ---------------------------------------------------------------------
 let s:fg_phead = s:fg_red_bright
 exe "hi! pandocHeading"                      .s:fg_phead .s:bg_none.s:fmt_bold
-exe "hi! pandocHeadingMarker"                .s:fg_yellow_normal.s:bg_none.s:fmt_bold
+exe "hi! pandocHeadingMarker"                .s:fg_yel_normal.s:bg_none.s:fmt_bold
 exe "hi! pandocEmphasisHeading"              .s:fg_phead .s:bg_none.s:fmt_bldi
 exe "hi! pandocEmphasisNestedHeading"        .s:fg_phead .s:bg_none.s:fmt_bldi
 exe "hi! pandocStrongEmphasisHeading"        .s:fg_phead .s:bg_none.s:fmt_bold
@@ -1057,51 +1057,51 @@ exe "hi! pandocSubscriptHeading"             .s:fg_phead .s:bg_none.s:fmt_bold
 
 " Links
 " ---------------------------------------------------------------------
-exe "hi! pandocLinkDelim"                .s:fg_green_bright .s:bg_none   .s:fmt_none
-exe "hi! pandocLinkLabel"                .s:fg_blue_normal   .s:bg_none   .s:fmt_undr
-exe "hi! pandocLinkText"                 .s:fg_blue_normal   .s:bg_none   .s:fmt_undb
-exe "hi! pandocLinkURL"                  .s:fg_yellow_bright .s:bg_none   .s:fmt_undr
-exe "hi! pandocLinkTitle"                .s:fg_yellow_bright .s:bg_none   .s:fmt_undi
-exe "hi! pandocLinkTitleDelim"           .s:fg_green_bright .s:bg_none   .s:fmt_undi   .s:sp_yellow_bright
-exe "hi! pandocLinkDefinition"           .s:fg_cyan_normal   .s:bg_none   .s:fmt_undr   .s:sp_yellow_bright
-exe "hi! pandocLinkDefinitionID"         .s:fg_blue_normal   .s:bg_none   .s:fmt_bold
-exe "hi! pandocImageCaption"             .s:fg_magenta_bright .s:bg_none   .s:fmt_undb
-exe "hi! pandocFootnoteLink"             .s:fg_green_normal  .s:bg_none   .s:fmt_undr
-exe "hi! pandocFootnoteDefLink"          .s:fg_green_normal  .s:bg_none   .s:fmt_bold
-exe "hi! pandocFootnoteInline"           .s:fg_green_normal  .s:bg_none   .s:fmt_undb
-exe "hi! pandocFootnote"                 .s:fg_green_normal  .s:bg_none   .s:fmt_none
-exe "hi! pandocCitationDelim"            .s:fg_magenta_normal.s:bg_none   .s:fmt_none
-exe "hi! pandocCitation"                 .s:fg_magenta_normal.s:bg_none   .s:fmt_none
-exe "hi! pandocCitationID"               .s:fg_magenta_normal.s:bg_none   .s:fmt_undr
-exe "hi! pandocCitationRef"              .s:fg_magenta_normal.s:bg_none   .s:fmt_none
+exe "hi! pandocLinkDelim"                .s:fg_grn_bright .s:bg_none   .s:fmt_none
+exe "hi! pandocLinkLabel"                .s:fg_blu_normal   .s:bg_none   .s:fmt_undr
+exe "hi! pandocLinkText"                 .s:fg_blu_normal   .s:bg_none   .s:fmt_undb
+exe "hi! pandocLinkURL"                  .s:fg_yel_bright .s:bg_none   .s:fmt_undr
+exe "hi! pandocLinkTitle"                .s:fg_yel_bright .s:bg_none   .s:fmt_undi
+exe "hi! pandocLinkTitleDelim"           .s:fg_grn_bright .s:bg_none   .s:fmt_undi   .s:sp_yel_bright
+exe "hi! pandocLinkDefinition"           .s:fg_cyn_normal   .s:bg_none   .s:fmt_undr   .s:sp_yel_bright
+exe "hi! pandocLinkDefinitionID"         .s:fg_blu_normal   .s:bg_none   .s:fmt_bold
+exe "hi! pandocImageCaption"             .s:fg_mag_bright .s:bg_none   .s:fmt_undb
+exe "hi! pandocFootnoteLink"             .s:fg_grn_normal  .s:bg_none   .s:fmt_undr
+exe "hi! pandocFootnoteDefLink"          .s:fg_grn_normal  .s:bg_none   .s:fmt_bold
+exe "hi! pandocFootnoteInline"           .s:fg_grn_normal  .s:bg_none   .s:fmt_undb
+exe "hi! pandocFootnote"                 .s:fg_grn_normal  .s:bg_none   .s:fmt_none
+exe "hi! pandocCitationDelim"            .s:fg_mag_normal.s:bg_none   .s:fmt_none
+exe "hi! pandocCitation"                 .s:fg_mag_normal.s:bg_none   .s:fmt_none
+exe "hi! pandocCitationID"               .s:fg_mag_normal.s:bg_none   .s:fmt_undr
+exe "hi! pandocCitationRef"              .s:fg_mag_normal.s:bg_none   .s:fmt_none
 
 " Main Styles
 " ---------------------------------------------------------------------
-exe "hi! pandocStyleDelim"               .s:fg_green_bright .s:bg_none  .s:fmt_none
-exe "hi! pandocEmphasis"                 .s:fg_blue_bright  .s:bg_none  .s:fmt_ital
-exe "hi! pandocEmphasisNested"           .s:fg_blue_bright  .s:bg_none  .s:fmt_bldi
-exe "hi! pandocStrongEmphasis"           .s:fg_blue_bright  .s:bg_none  .s:fmt_bold
-exe "hi! pandocStrongEmphasisNested"     .s:fg_blue_bright  .s:bg_none  .s:fmt_bldi
-exe "hi! pandocStrongEmphasisEmphasis"   .s:fg_blue_bright  .s:bg_none  .s:fmt_bldi
-exe "hi! pandocStrikeout"                .s:fg_green_bright .s:bg_none  .s:fmt_revr
-exe "hi! pandocVerbatimInline"           .s:fg_yellow_normal .s:bg_none  .s:fmt_none
-exe "hi! pandocSuperscript"              .s:fg_magenta_bright .s:bg_none  .s:fmt_none
-exe "hi! pandocSubscript"                .s:fg_magenta_bright .s:bg_none  .s:fmt_none
+exe "hi! pandocStyleDelim"               .s:fg_grn_bright .s:bg_none  .s:fmt_none
+exe "hi! pandocEmphasis"                 .s:fg_blu_bright  .s:bg_none  .s:fmt_ital
+exe "hi! pandocEmphasisNested"           .s:fg_blu_bright  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasis"           .s:fg_blu_bright  .s:bg_none  .s:fmt_bold
+exe "hi! pandocStrongEmphasisNested"     .s:fg_blu_bright  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasis"   .s:fg_blu_bright  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrikeout"                .s:fg_grn_bright .s:bg_none  .s:fmt_revr
+exe "hi! pandocVerbatimInline"           .s:fg_yel_normal .s:bg_none  .s:fmt_none
+exe "hi! pandocSuperscript"              .s:fg_mag_bright .s:bg_none  .s:fmt_none
+exe "hi! pandocSubscript"                .s:fg_mag_bright .s:bg_none  .s:fmt_none
 
-exe "hi! pandocRule"                     .s:fg_blue_normal   .s:bg_none  .s:fmt_bold
-exe "hi! pandocRuleLine"                 .s:fg_blue_normal   .s:bg_none  .s:fmt_bold
+exe "hi! pandocRule"                     .s:fg_blu_normal   .s:bg_none  .s:fmt_bold
+exe "hi! pandocRuleLine"                 .s:fg_blu_normal   .s:bg_none  .s:fmt_bold
 exe "hi! pandocEscapePair"               .s:fg_red_normal    .s:bg_none  .s:fmt_bold
-exe "hi! pandocCitationRef"              .s:fg_magenta_normal.s:bg_none   .s:fmt_none
+exe "hi! pandocCitationRef"              .s:fg_mag_normal.s:bg_none   .s:fmt_none
 exe "hi! pandocNonBreakingSpace"         . s:fg_red_normal   .s:bg_none  .s:fmt_revr
 hi! link pandocEscapedCharacter          pandocEscapePair
 hi! link pandocLineBreak                 pandocEscapePair
 
 " Embedded Code
 " ---------------------------------------------------------------------
-exe "hi! pandocMetadataDelim"            .s:fg_green_bright .s:bg_none   .s:fmt_none
-exe "hi! pandocMetadata"                 .s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocMetadataKey"              .s:fg_blue_normal   .s:bg_none   .s:fmt_none
-exe "hi! pandocMetadata"                 .s:fg_blue_normal   .s:bg_none   .s:fmt_bold
+exe "hi! pandocMetadataDelim"            .s:fg_grn_bright .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadata"                 .s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadataKey"              .s:fg_blu_normal   .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadata"                 .s:fg_blu_normal   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
 
 "}}}
