@@ -5,7 +5,9 @@ syn match   jsOperatorSign					"[-!|&+<>=%/*~^]" skipwhite skipempty nextgroup=@
 " JSDoc
 syn case ignore
 
-syn region  jsComment						start=+/\*\*+  end=+\*/+ contains=jsDocNotation,jsCodeComment,jsBoldComment,jsCommentTodo,@Spell fold extend keepend
+syn region  jsComment								start=+/\*\*+  end=+\*/+ contains=jsDocNotation,jsCodeComment,jsBoldComment,jsCommentTodo,@Spell fold extend keepend
+syn region  jsLineComment           start="//" end="\n" contains=@Spell,jsCommentTodo
+
 
 syn match   jsDocNotation           contained /\W@/ nextgroup=jsDocTags
 
@@ -68,7 +70,7 @@ hi def link jsComment								Comment
 hi def link jsDocs									Comment
 
 "hi def link jsDocComment						Comment
-"hi def link jsCommentTodo						Todo
+hi def link jsLineComment						jsComment
 
 hi def link jsDocNotation						SpecialComment
 hi def link jsDocTags								SpecialComment
