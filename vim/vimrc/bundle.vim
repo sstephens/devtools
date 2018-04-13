@@ -2,8 +2,14 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if !has('nvim')
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin('~/.vim/bundle')
+else
+	set rtp+=~/.local/share/nvim/site/bundle/Vundle.vim
+	call vundle#begin('~/.local/share/nvim/site/bundle')
+endif
+
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -12,9 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " --- Configurable Plugins --- 
 "
-call g:Importrc("languageclient.vim")					" include language client plugin
+"call g:Importrc("languageclient.vim")					" include language client plugin (not working with vundle)
 call g:Importrc("nerdtree.vim")								" include nerdtree plugin
-"call g:Importrc("ctrlp.vim")									" include ctrl-p plugin
 call g:Importrc("syntastic.vim")							" include syntastic plugin
 call g:Importrc("completion.vim")							" include supertab completion plugin
 
@@ -22,7 +27,14 @@ call g:Importrc("completion.vim")							" include supertab completion plugin
 " --- VIM IMPROVEMENT PLUGINS ---
 "
 Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
-"Plugin 'scrooloose/nerdcommenter'						" Comment helper
+
+Plugin 'ctrlpvim/ctrlp.vim'										" Ctrl-p vim plugin
+let g:ctrlp_working_path_mode = ''						" Set ctrl-p working path
+	
+"Plugin 'scrooloose/nerdtree'									" Tab opens a file browser left nav window
+"nmap <C-i> :NERDTreeToggle<CR>								"	remap nerdtree open window key
+"set winfixwidth															" keep window fixed for nerdtree
+
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plugin 'jreybert/vimagit'											" git helper
 Plugin 'wincent/command-t'										" fuzzy navagation
@@ -38,7 +50,23 @@ Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plugin 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
 Plugin 'othree/yajs.vim'											" -- JAVASCRIPT
 Plugin 'mxw/vim-jsx'													" -- JAVASCRIPT MARKUP
+
+if g:devtools_typescript
+	Plugin 'leafgarland/typescript-vim'						" -- TYPESCRIPT
+	Plugin 'mhartington/vim-typings'
+	Plugin 'Quramy/tsuquyomi'
+endif
+
+if g:devtools_flow
+	Plugin 'flowtype/vim-flow'										" Flow types
+	let g:flow#enable=0
+	let g:flow#autoclose=1
+	let g:flow#errjmp=0
+endif
+
 Plugin 'elzr/vim-json'												" -- JSON
+
+
 Plugin 'othree/html5.vim'											" -- HTML
 Plugin 'joukevandermaas/vim-ember-hbs'				" -- HANDLEBARS
 Plugin 'hail2u/vim-css3-syntax'								" -- CSS highlights

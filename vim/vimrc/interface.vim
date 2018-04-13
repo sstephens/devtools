@@ -44,7 +44,6 @@ set smartcase																			" add case sensitive search when capitol letter 
 
 set autoread																			" reload file if another source changes it
 
-set encoding=utf-8																" use UTF-8 file encoding
 "set fillchars+=stl:\ ,stlnc:\
 set ffs=unix,mac,dos
 

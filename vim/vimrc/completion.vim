@@ -3,7 +3,11 @@
 "
 
 " -- include plugin
-Plugin 'ervandew/supertab'
+if g:devtools_bundle
+	Plugin 'ervandew/supertab'
+else
+	Plug 'ervandew/supertab'
+endif
 
 " -- set options
 let g:SuperTabDefaultCompletionType = "<c-n>"																						" set completion key <tab>

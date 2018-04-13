@@ -6,6 +6,9 @@ execute "set runtimepath=".&runtimepath.",".$HOME."/devtools/vim"
 let mapleader = "\\"
 let g:mapleader = "\\"
 
+set encoding=utf-8																" use UTF-8 file encoding
+set pyxversion=3
+
 " ---------- GLOBAl DECLARATIONS --------- "
 let g:devtools_path = get(g:, 'devtools_path', "~/devtools")				" set devtools vim directory
 let g:devtools_bundle = get(g:, 'devtools_bundle', 1)								" include Vundle bundler package
@@ -17,12 +20,10 @@ endfunction
 
 
 " ----------- IMPORT PLUGINS ------------ "
-if g:devtools_bundle || g:devtools_vundle														
+if g:devtools_bundle	
 	call Importrc("plugins.vim")																			" include bundle packages
 endif
 
-
-filetype plugin indent on																						" Turn on syntax for filetypes
 
 if has("mac")																												
 	call Importrc("terminal.vim")																			" Terminal settings for mac
@@ -36,5 +37,8 @@ call Importrc("interface.vim")																			" interface settings
 call Importrc("codestyle.vim")																			" code style helpers 
 call Importrc("filetypes.vim")																			" file type specific settings
 call Importrc("mappings.vim")																				" mappings
+
+let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
+let $NVIM_PYTHON_LOG_LEVEL="DEBUG"
 
 "set rtp+=/usr/local/opt/fzf																					" enable fuzzy finder
