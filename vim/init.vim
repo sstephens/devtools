@@ -74,11 +74,12 @@ set noerrorbells visualbell t_vb=									" remove error bells
 autocmd GUIEnter * set visualbell t_vb=						" remove error bells visual cues
 
 if !has('nvim')
-	set mouse=ar																			" use mouse in vim (works on mac)
 	if g:devtools_iterm2
 		set ttymouse=xterm2
 	endif
 endif
+	
+set mouse=ar																			" use mouse in vim (works on mac)
 
 set wildmenu																			" use vim wildmenu
 set wildignore=*.o,*.bak,*.jpg,*.gif,*.png				" make wildmenu ignore file types
