@@ -25,16 +25,20 @@ let g:ctrlp_working_path_mode = ''						" Set ctrl-p working path
 "nmap <C-i> :NERDTreeToggle<CR>								"	remap nerdtree open window key
 "set winfixwidth															" keep window fixed for nerdtree
 
+Plug 'scrooloose/nerdcommenter'								" powerfull commenter
+let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = { 're': { 'left': '/*','right': '*/' } }
+
+
 Plug 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plug 'jreybert/vimagit'											" git helper
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
 "
-Plug 'reasonml-editor/vim-reason-plus'			" -- REASON
-
 Plug 'udalov/kotlin-vim'										" -- KOTLIN
 Plug 'rust-lang/rust.vim'										" -- RUST
+Plug 'dart-lang/dart-vim-plugin'						" -- DART LANG
 Plug 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plug 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
 Plug 'othree/yajs.vim'											" -- JAVASCRIPT

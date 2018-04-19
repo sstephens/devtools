@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Sources/busy-web/react-starter-app/src/styles'
+let g:netrw_dirhist_2='/Users/suclimbing/.opam/system/lib/toplevel'
+let g:netrw_dirhist_3='/Sources/busy-web/project-reason-react'
+let g:netrw_dirhist_4='/Sources/busy-web/project-dart/.dart_tool'

@@ -1,4 +1,7 @@
 
+Plug 'reasonml-editor/vim-reason-plus'			" -- REASON
+
+
 " LanguageClient adds extra language support to vim
 if g:devtools_bundle
 	if has('nvim')

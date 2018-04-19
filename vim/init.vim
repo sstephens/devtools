@@ -1,7 +1,6 @@
 
 execute 'set rtp^='.$HOME.'/devtools/vim'
 
-
 " -- MAP LEADER -- "
 let mapleader = "\\"
 let g:mapleader = "\\"
@@ -21,6 +20,7 @@ function! g:Importrc(name)																					" import rc file method
 	execute "source ".g:devtools_path."/vim/vimrc/".a:name
 endfunction
 
+call Importrc("ocaml.vim")																					" ocaml setup
 
 " ----------- IMPORT PLUGINS ------------ "
 if g:devtools_vimplug
@@ -93,6 +93,7 @@ set showtabline=2
 
 set showmatch																			" show matching brackets
 set incsearch																			" better word searching
+set nohlsearch
 
 set ignorecase																		" case insensitive search
 set smartcase																			" add case sensitive search when capitol letter is typed
@@ -142,6 +143,12 @@ let g:airline_symbols.maxlinenr = '㏑'
 "let g:airline_section_c = ''
 
 
+" ---------- DART Settings ---------"
+"let dart_html_in_string=v:true
+"let dart_corelib_highlight=v:true
+"let dart_style_guide=2
+"let dart_format_on_save=1
+
 
 " ---------- FILES AND BACKUPS ------ "
 set nobackup																			" turn backup off 
@@ -155,9 +162,9 @@ set noswapfile
 "
 " -------- CODE STYLE SETTINGS ---------
 "
-setlocal indentkeys+=0														" ??
-set formatoptions=rq															" format options ??
-
+"setlocal indentkeys+=0														" ??
+"set formatoptions=rq															" format options ??
+"
 set backspace=2																		" backspace for spaces acts like backspace for tabs
 set shiftround																		" makes tabs line up when tabs and spaces mix
 set tabstop=2																			" tab width 4 spaces
@@ -227,9 +234,12 @@ au FileType python set indentkeys-=0#
 " --- key mappings for quicker actions ---
 "
 
+" -- faster tab opening
+map <leader>t :tabnew 
+
 " -- faster edit and reload of vimrc
-map <leader>e :e! ~/.vimrc<cr>
-autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+"map <leader>e :e! ~/devtools/vim/init.vim<cr>
+"autocmd! bufwritepost ~/devtools/vim/init.vim source ~/devtools/vim/init.vim
 
 " -- comment block and uncomment with //
 map <C-K> I//<Esc><Esc>
@@ -244,11 +254,11 @@ iab clog console.log(
 
 
 " Bash like keys for the command line
-cnoremap <C-A>		<Home>
-cnoremap <C-E>		<End>
-cnoremap <C-K>		<C-U>
-cnoremap <C-P>		<Up>
-cnoremap <C-N>		<Down>
+"cnoremap <C-A>		<Home>
+"cnoremap <C-E>		<End>
+"cnoremap <C-K>		<C-U>
+"cnoremap <C-P>		<Up>
+"cnoremap <C-N>		<Down>
 
 
 "set rtp+=/usr/local/opt/fzf																					" enable fuzzy finder

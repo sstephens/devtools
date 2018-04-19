@@ -21,18 +21,16 @@ call g:Importrc("completion.vim")							" include supertab completion plugin
 "
 " --- VIM IMPROVEMENT PLUGINS ---
 "
-Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
+"Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
 "Plugin 'scrooloose/nerdcommenter'						" Comment helper
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plugin 'jreybert/vimagit'											" git helper
-Plugin 'wincent/command-t'										" fuzzy navagation
+"Plugin 'wincent/command-t'										" fuzzy navagation
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
 "
-Plugin 'reasonml-editor/vim-reason-plus'			" -- REASON
-
-Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
 Plugin 'rust-lang/rust.vim'										" -- RUST
 Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plugin 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
