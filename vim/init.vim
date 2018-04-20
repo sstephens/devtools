@@ -203,9 +203,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 "
 " ---------------------- SASS Section --------------------
 "
-autocmd FileType sass set iskeyword+=-
-autocmd FileType sass set omnifunc=csscomplete#CompleteCSS		
-autocmd BufRead,BufNewFile *.scss set filetype=sass
+autocmd FileType scss set iskeyword+=-
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS		
+autocmd BufRead,BufNewFile *.scss set filetype=scss
 
 "
 " ------------------- Python section ---------------------
