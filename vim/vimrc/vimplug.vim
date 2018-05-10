@@ -8,37 +8,29 @@ else
 	call plug#begin('~/.local/share/nvim/plugged')
 endif
 
+
+
+
+
+
 "
 " --- Configurable Plugins --- 
 "
-call g:Importrc("languageclient.vim")					" include language client plugin
+"call g:Importrc("languageclient.vim")					" include language client plugin
+call g:Importrc("ctrlp.vim")									" include ctrl-p plugin
+call g:Importrc("nerdtree.vim")								" include nerdtree plugin
 call g:Importrc("syntastic.vim")							" include syntastic plugin
 call g:Importrc("completion.vim")							" include supertab completion plugin
 
-Plug 'tpope/vim-fugitive'											" Ultimate git tool for vim
-
-" -- include plugin
-Plug 'ctrlpvim/ctrlp.vim'											" Ctrl-p vim plugin
-let g:ctrlp_working_path_mode = ''						" Set ctrl-p working path
-	
-"Plug 'scrooloose/nerdtree'										" Tab opens a file browser left nav window
-"nmap <C-i> :NERDTreeToggle<CR>								"	remap nerdtree open window key
-"set winfixwidth															" keep window fixed for nerdtree
-
-Plug 'scrooloose/nerdcommenter'								" powerfull commenter
-let g:NERDSpaceDelims = 1
-let g:NERDCustomDelimiters = { 're': { 'left': '/*','right': '*/' } }
-
-
+"
+" --- VIM IMPROVEMENT PLUGINS ---
+"
 Plug 'editorconfig/editorconfig-vim'				" Editorconfig plugin
-Plug 'jreybert/vimagit'											" git helper
+Plug 'tpope/vim-fugitive'											" Ultimate git tool for vim
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
 "
-Plug 'udalov/kotlin-vim'										" -- KOTLIN
-Plug 'rust-lang/rust.vim'										" -- RUST
-Plug 'dart-lang/dart-vim-plugin'						" -- DART LANG
 Plug 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plug 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
 Plug 'othree/yajs.vim'											" -- JAVASCRIPT
@@ -58,8 +50,6 @@ if g:devtools_flow
 endif
 
 Plug 'elzr/vim-json'												" -- JSON
-
-
 Plug 'othree/html5.vim'											" -- HTML
 Plug 'joukevandermaas/vim-ember-hbs'				" -- HANDLEBARS
 Plug 'hail2u/vim-css3-syntax'								" -- CSS highlights
@@ -79,9 +69,17 @@ Plug 'ajh17/Spacegray.vim'									" -- spacegray
 Plug 'Heorhiy/VisualStudioDark.vim'					" -- vscode dark
 Plug 'Badacadabra/vim-archery'							" -- archery
 Plug 'nightsense/vimspectr'									" -- terminal vim colors
-
 Plug 'vim-airline/vim-airline'							" -- Airline - status line plugin
 Plug 'vim-airline/vim-airline-themes'				" -- Airline - themes
 
 " Initialize plugin system
 call plug#end()
+
+
+"
+" ---- OTHER PLUGINS NOT USED -----
+"
+"Plug 'jreybert/vimagit'										" git helper
+"Plug 'udalov/kotlin-vim'										" -- KOTLIN
+"Plug 'rust-lang/rust.vim'									" -- RUST
+"Plug 'dart-lang/dart-vim-plugin'						" -- DART LANG

@@ -10,12 +10,20 @@ else
 	Plug 'vim-syntastic/syntastic'
 endif
 
+let g:syntastic_filetype_map = { "javascript.jsx": "javascript" }
 
 " -- set syntastic options
-"let g:syntastic_debug=1
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_always_populate_loc_list=1
+let g:syntastic_debug = 0
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_enable_signs = 1
+
+let g:syntastic_aggregate_errors = 1
+
 
 " --- PHP ---
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
@@ -37,6 +45,14 @@ if g:devtools_flow
 	let g:syntastic_javascript_checkers = ['eslint', 'flow']
 else
 	let g:syntastic_javascript_checkers = ['eslint']
+endif
+
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+    let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+    let g:syntastic_javascript_eslint_exec = local_eslint
 endif
 
 if filereadable("./.eslintrc.js")
@@ -70,3 +86,8 @@ else
 	let g:syntastic_scss_sass_lint_args = '--config ~/.sass-lint.yml'
 	let g:syntastic_sass_sass_lint_args = '--config ~/.sass-lint.yml'
 endif
+
+" key mappings
+"
+map <leader>n :lnext<CR>
+map <leader>p :lp<CR>

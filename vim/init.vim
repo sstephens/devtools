@@ -193,6 +193,7 @@ autocmd BufRead,BufNewFile .editorconfig set filetype=config
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0 
+"autocmd BufRead,BufNewFile *.{js,jsx} set filetype=javascript
 
 "
 " ---------------------- CSS Section --------------------
@@ -236,14 +237,15 @@ au FileType python set indentkeys-=0#
 
 " -- faster tab opening
 map <leader>t :tabnew 
+map <leader>lt :tabnew<Up>
 
 " -- faster edit and reload of vimrc
 "map <leader>e :e! ~/devtools/vim/init.vim<cr>
 "autocmd! bufwritepost ~/devtools/vim/init.vim source ~/devtools/vim/init.vim
 
 " -- comment block and uncomment with //
-map <C-K> I//<Esc><Esc>
-map <C-L> x<Esc><Esc>
+"map <C-K> I//<Esc><Esc>
+"map <C-L> x<Esc><Esc>
 
 " -- Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm

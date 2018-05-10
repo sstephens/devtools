@@ -10,15 +10,14 @@ else
 	call vundle#begin('~/.local/share/nvim/site/bundle')
 endif
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 "
 " --- Configurable Plugins --- 
 "
 "call g:Importrc("languageclient.vim")					" include language client plugin (not working with vundle)
+call g:Importrc("ctrlp.vim")									" include ctrl-p plugin
 call g:Importrc("nerdtree.vim")								" include nerdtree plugin
 call g:Importrc("syntastic.vim")							" include syntastic plugin
 call g:Importrc("completion.vim")							" include supertab completion plugin
@@ -26,26 +25,12 @@ call g:Importrc("completion.vim")							" include supertab completion plugin
 "
 " --- VIM IMPROVEMENT PLUGINS ---
 "
-Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
-
-Plugin 'ctrlpvim/ctrlp.vim'										" Ctrl-p vim plugin
-let g:ctrlp_working_path_mode = ''						" Set ctrl-p working path
-	
-"Plugin 'scrooloose/nerdtree'									" Tab opens a file browser left nav window
-"nmap <C-i> :NERDTreeToggle<CR>								"	remap nerdtree open window key
-"set winfixwidth															" keep window fixed for nerdtree
-
-Plugin 'scrooloose/nerdcommenter'							" powerfull commenter
-
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
-"Plugin 'jreybert/vimagit'											" git helper
-"Plugin 'wincent/command-t'										" fuzzy navagation
+Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
 "
-"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
-"Plugin 'rust-lang/rust.vim'										" -- RUST
 Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plugin 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
 Plugin 'othree/yajs.vim'											" -- JAVASCRIPT
@@ -105,3 +90,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+
+"
+" --- OTHER PLUGINS NOT USED ---
+"
+"Plugin 'jreybert/vimagit'										" git helper
+"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+"Plugin 'rust-lang/rust.vim'									" -- RUST
+"Plugin 'dart-lang/dart-vim-plugin'						" -- DART LANG
