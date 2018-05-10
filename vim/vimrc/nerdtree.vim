@@ -16,5 +16,9 @@ endif
 nmap <C-n> :NERDTreeToggle<CR>						" remap nerdtree open window key
 "set winfixwidth													" keep window fixed for nerdtree
 
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeShowHidden = 1
+
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = { 're': { 'left': '/*','right': '*/' } }
+        
