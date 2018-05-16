@@ -190,6 +190,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 autocmd BufRead,BufNewFile .flowconfig set filetype=config
 autocmd BufRead,BufNewFile .editorconfig set filetype=config
+autocmd BufRead,BufNewFile .babelrc set filetype=json
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0 
