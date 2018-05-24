@@ -19,7 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 "call g:Importrc("languageclient.vim")					" include language client plugin (not working with vundle)
 call g:Importrc("ctrlp.vim")									" include ctrl-p plugin
 call g:Importrc("nerdtree.vim")								" include nerdtree plugin
-call g:Importrc("syntastic.vim")							" include syntastic plugin
+"call g:Importrc("syntastic.vim")							" include syntastic plugin
 call g:Importrc("completion.vim")							" include supertab completion plugin
 
 "
@@ -27,6 +27,8 @@ call g:Importrc("completion.vim")							" include supertab completion plugin
 "
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
+Plugin 'w0rp/ale'															" ale linter
+let g:ale_completion_enabled = 1
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
@@ -65,6 +67,13 @@ Plugin 'gcorne/vim-sass-lint'									" -- SASS/SCSS linting
 Plugin 'codenothing/jsonlint'									" -- JSON
 
 "
+" --- KOTLIN PLUGINS ----
+"
+Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+"let g:ale_kotlin_kotlinc_options="--android"
+let g:ale_kotlin_ktlint_executable="ktlint --android"
+
+"
 " --- COLOR SCHEME PLUGINS ---
 "
 Plugin 'altercation/vim-colors-solarized'			" -- solarized
@@ -96,6 +105,5 @@ filetype plugin indent on    " required
 " --- OTHER PLUGINS NOT USED ---
 "
 "Plugin 'jreybert/vimagit'										" git helper
-"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
 "Plugin 'rust-lang/rust.vim'									" -- RUST
 "Plugin 'dart-lang/dart-vim-plugin'						" -- DART LANG

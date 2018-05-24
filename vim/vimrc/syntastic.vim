@@ -34,6 +34,10 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_rust_checkers = ['cargo']
 
 
+" --- Kotlin ---
+let g:syntastic_kotlin_checkers = ['ktlint']
+
+
 
 " --- YAML ---
 let g:syntastic_jsyaml_checkers=["js-yaml"]

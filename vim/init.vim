@@ -121,6 +121,9 @@ let g:airline_theme = 'material'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
 "let g:airline#extensions#tabline#left_sep = '⮀'
 "let g:airline#extensions#tabline#left_alt_sep = '⮁'
 "let g:airline#extensions#tabline#right_sep = '⮂'
@@ -236,9 +239,16 @@ au FileType python set indentkeys-=0#
 " --- key mappings for quicker actions ---
 "
 
+" -- faster editor config --
+nmap <leader>ed :tabnew .editorconfig<cr>
+
 " -- faster tab opening
 map <leader>t :tabnew 
 map <leader>lt :tabnew<Up>
+
+" -- faster error nav with ale
+nmap <leader>= <Plug>(ale_next_wrap)
+nmap <leader>- <Plug>(ale_previous_wrap)
 
 " -- faster edit and reload of vimrc
 "map <leader>e :e! ~/devtools/vim/init.vim<cr>
