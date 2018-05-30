@@ -29,6 +29,8 @@ Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
 Plugin 'w0rp/ale'															" ale linter
 let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
