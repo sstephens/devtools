@@ -20,21 +20,28 @@ Plugin 'VundleVim/Vundle.vim'
 call g:Importrc("ctrlp.vim")									" include ctrl-p plugin
 call g:Importrc("nerdtree.vim")								" include nerdtree plugin
 "call g:Importrc("syntastic.vim")							" include syntastic plugin
-call g:Importrc("completion.vim")							" include supertab completion plugin
+"call g:Importrc("completion.vim")							" include supertab completion plugin
 
 "
 " --- VIM IMPROVEMENT PLUGINS ---
-"
+Plugin 'ervandew/supertab'										" Supertab completion
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+Plugin 'machakann/vim-swap'										" vim swap delimited items
+
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 Plugin 'tpope/vim-fugitive'										" Ultimate git tool for vim
 Plugin 'w0rp/ale'															" ale linter
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+"let g:ale_list_window_size = 10
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+"let g:ale_open_list = 1
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
-"
 Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
 Plugin 'jelera/vim-javascript-syntax'				  " -- JAVASCRIPT
 Plugin 'othree/yajs.vim'											" -- JAVASCRIPT
@@ -65,15 +72,14 @@ Plugin 'gcorne/vim-sass-lint'									" -- SASS/SCSS linting
 
 "
 " --- LANGUAGE LINT PLUGINS ----
-"
 Plugin 'codenothing/jsonlint'									" -- JSON
 
 "
 " --- KOTLIN PLUGINS ----
 "
-Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
 "let g:ale_kotlin_kotlinc_options="--android"
-let g:ale_kotlin_ktlint_executable="ktlint --android"
+"let g:ale_kotlin_ktlint_executable="ktlint --android"
 
 "
 " --- COLOR SCHEME PLUGINS ---

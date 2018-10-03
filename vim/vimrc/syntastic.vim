@@ -71,7 +71,7 @@ endif
 if g:devtools_typescript
 	let g:tsuquyomi_disable_quickfix = 1
 
-	let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
+	let g:syntastic_typescript_checkers = ['tslint']
 	if filereadable("./tslint.json")
 		let g:syntastic_typescript_lint_args = '--config ./tslint.json'
 	else

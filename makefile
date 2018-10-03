@@ -10,7 +10,7 @@ endif
 prog:
 	./vim/install.sh $(RUN_ARGS)
 
-.PHONY: install iterm force bundle vimplug flow
+.PHONY: install iterm force bundle flow
 
 install: prog
 	@echo prog

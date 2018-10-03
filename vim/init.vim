@@ -21,7 +21,7 @@ function! g:Importrc(name)																					" import rc file method
 endfunction
 
 call Importrc("ocaml.vim")																					" ocaml setup
-call Importrc("templates.vim")																			" open new files with templates
+"call Importrc("templates.vim")																			" open new files with templates
 
 " ----------- IMPORT PLUGINS ------------ "
 if g:devtools_vimplug
@@ -191,6 +191,7 @@ au FileType javascript inoremap <buffer> $f //--- PH<esc>FP2xi
 
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
 
+autocmd BufRead,BufNewFile *.toml set filetype=gitconfig
 autocmd BufRead,BufNewFile .flowconfig set filetype=config
 autocmd BufRead,BufNewFile .editorconfig set filetype=config
 autocmd BufRead,BufNewFile .babelrc set filetype=json
