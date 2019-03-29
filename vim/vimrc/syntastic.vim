@@ -86,6 +86,9 @@ let g:syntastic_scss_checkers=["sasslint"]
 if filereadable("./.sass-lint.yml")
 	let g:syntastic_scss_sass_lint_args = '--config ./.sass-lint.yml'
 	let g:syntastic_sass_sass_lint_args = '--config ./.sass-lint.yml'
+elseif filereadable("./.scss-lint.yml")
+	let g:syntastic_scss_sass_lint_args = '--config ./.scss-lint.yml'
+	let g:syntastic_sass_sass_lint_args = '--config ./.scss-lint.yml'
 else
 	let g:syntastic_scss_sass_lint_args = '--config ~/.sass-lint.yml'
 	let g:syntastic_sass_sass_lint_args = '--config ~/.sass-lint.yml'

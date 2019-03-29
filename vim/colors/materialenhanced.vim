@@ -504,49 +504,50 @@ exe "hi! Normal"						.s:fmt_none   .s:fg_wht_normal			.s:bg_back
 
 exe "hi! Comment"						.s:fmt_ital   .s:fg_blk_bright			.s:bg_none
 
-exe "hi! Constant"					.s:fmt_none   .s:fg_cyn_normal				.s:bg_none
-exe "hi! String"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
-exe "hi! Character"					.s:fmt_none   .s:fg_red_bright				.s:bg_none
-exe "hi! Boolean"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
-exe "hi! Number"						.s:fmt_none   .s:fg_red_bright				.s:bg_none
-exe "hi! Float"							.s:fmt_none   .s:fg_red_bright				.s:bg_none
+exe "hi! Constant"					.s:fmt_none   .s:fg_cyn_normal			.s:bg_none
+exe "hi! String"						.s:fmt_none   .s:fg_red_bright			.s:bg_none
+exe "hi! Character"					.s:fmt_none   .s:fg_red_bright			.s:bg_none
+exe "hi! Boolean"						.s:fmt_none   .s:fg_red_bright			.s:bg_none
+exe "hi! Number"						.s:fmt_none   .s:fg_red_bright			.s:bg_none
+exe "hi! Float"							.s:fmt_none   .s:fg_red_bright			.s:bg_none
 
-"exe "hi! Identifier"				.s:fmt_none   .s:fg_cyn_normal				.s:bg_none
-"exe "hi! Function"					.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+exe "hi! Identifier"				.s:fmt_none   .s:fg_cyn_normal			.s:bg_none
+exe "hi! Function"					.s:fmt_none   .s:fg_cyn_bright			.s:bg_none
 
-exe "hi! Conditional"				.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Repeat"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Label"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Exception"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
+exe "hi! Conditional"				.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Repeat"						.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Label"							.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Exception"					.s:fmt_none   .s:fg_red_normal			.s:bg_none
 
-"exe "hi! Noise"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Operator"					.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+exe "hi! Noise"							.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Operator"					.s:fmt_none   .s:fg_mag_bright			.s:bg_none
 
-exe "hi! Include"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Define"						.s:fmt_none   .s:fg_mag_bright		.s:bg_none
+exe "hi! Include"						.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Define"						.s:fmt_none   .s:fg_mag_bright			.s:bg_none
 
-"exe "hi! Macro"							.s:fmt_none   .s:fg_red_normal				.s:bg_none
-"exe "hi! PreCondit"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
+exe "hi! Macro"							.s:fmt_none   .s:fg_yel_bright			.s:bg_none
+exe "hi! PreCondit"					.s:fmt_none   .s:fg_yel_bright			.s:bg_none
 
-"exe "hi! Type"							.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Keyword"						.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! Type"							.s:fmt_none   .s:fg_grn_bright			.s:bg_none
+exe "hi! Keyword"						.s:fmt_none   .s:fg_mag_normal			.s:bg_none
 
-exe "hi! Special"						.s:fmt_none   .s:fg_blu_normal				.s:bg_none
-"exe "hi! Structure"					.s:fmt_none   .s:fg_blu_normal				.s:bg_none
-"exe "hi! Statement"					.s:fmt_none   .s:fg_grn_normal			.s:bg_none
+exe "hi! Special"						.s:fmt_none   .s:fg_blu_normal			.s:bg_none
+exe "hi! Structure"					.s:fmt_none   .s:fg_blu_normal			.s:bg_none
+exe "hi! Statement"					.s:fmt_none   .s:fg_grn_normal			.s:bg_none
 
-"exe "hi! PreProc"						.s:fmt_none   .s:fg_red_normal				.s:bg_none
-"exe "hi! SpecialChar"				.s:fmt_none   .s:fg_red_normal				.s:bg_none
-"exe "hi! Tag"								.s:fmt_none   .s:fg_red_normal				.s:bg_none
-"exe "hi! Delimiter"					.s:fmt_none   .s:fg_red_normal				.s:bg_none
+exe "hi! PreProc"						.s:fmt_none   .s:fg_blu_bright			.s:bg_none
+exe "hi! SpecialChar"				.s:fmt_none   .s:fg_red_normal			.s:bg_none
+exe "hi! Tag"								.s:fmt_none   .s:fg_red_normal			.s:bg_none
+exe "hi! Delimiter"					.s:fmt_none   .s:fg_red_normal			.s:bg_none
 
-"exe "hi! SpecialComment"		.s:fmt_none   .s:fg_mag_bright		.s:bg_none
-"exe "hi! Debug"							.s:fmt_none   .s:fg_mag_normal		.s:bg_none
+exe "hi! SpecialComment"		.s:fmt_none   .s:fg_mag_bright			.s:bg_none
+exe "hi! Debug"							.s:fmt_none   .s:fg_grn_normal			.s:bg_none
 
 exe "hi! Underlined"				.s:fmt_none   .s:fg_wht_normal			.s:bg_none
-exe "hi! Ignore"						.s:fmt_none   .s:fg_none							.s:bg_none
-exe "hi! Error"							.s:fmt_bold   .s:fg_red_normal				.s:bg_none
+exe "hi! Ignore"						.s:fmt_none   .s:fg_none						.s:bg_none
+exe "hi! Error"							.s:fmt_bold   .s:fg_red_normal			.s:bg_none
 exe "hi! Todo"							.s:fmt_bold   .s:fg_blu_bright			.s:bg_none
+
 "														keywords TODO FIXME and XXX
 "
 "}}}
@@ -804,48 +805,36 @@ exe "hi! jsDocNamedParamType"								.s:fmt_none		.s:fg_red_bright		.s:bg_none
 "}}}
 " typescript highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! typescriptGlobalObjects"						.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptExceptions"							.s:fmt_none		.s:fg_yel_bright		.s:bg_none
 
-exe "hi! typescriptSource"									.s:fmt_none		.s:fg_blu_normal		.s:bg_none
-exe "hi! typescriptIdentifier"							.s:fmt_none		.s:fg_blu_normal		.s:bg_none
-exe "hi! typescriptStorageClass"						.s:fmt_none		.s:fg_mag_normal		.s:bg_none
-"exe "hi! typescriptReserved"								.s:fmt_none		.s:fg_mag_normal		.s:bg_none
-
-exe "hi! typescriptLabel"										.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptBranch"									.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptConditional"							.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptRepeat"									.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptStatement"								.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptNull"										.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-exe "hi! typescriptOperator"								.s:fmt_none		.s:fg_yel_normal		.s:bg_none
-
+exe "hi! typescriptGlobal"									.s:fmt_none		.s:fg_grn_bright		.s:bg_none
+exe "hi! typescriptVariable"								.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptImport"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptExport"									.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! typescriptModule"									.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
 exe "hi! typescriptFuncKeyword"							.s:fmt_none		.s:fg_mag_normal		.s:bg_none
-exe "hi! typescriptFunction"								.s:fmt_none		.s:fg_blu_bright		.s:bg_none
-exe "hi! typescriptType"										.s:fmt_none		.s:fg_red_bright		.s:bg_none
-exe "hi! typescriptDecorators"							.s:fmt_none		.s:fg_grn_normal		.s:bg_none
+exe "hi! typescriptArrowFunc"								.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+"exe "hi! typescriptParamImpl"								.s:fmt_none		.s:fg_grn_bright		.s:bg_none
 
-exe "hi! typescriptBraces"									.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptParens"									.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptOpSymbols"								.s:fmt_none		.s:fg_mag_normal		.s:bg_none
-exe "hi! typescriptEndColons"								.s:fmt_none		.s:fg_mag_normal		.s:bg_none
-exe "hi! typescriptLogicSymbols"						.s:fmt_none		.s:fg_mag_normal		.s:bg_none
+exe "hi! typescriptNull"										.s:fmt_none		.s:fg_yel_bright		.s:bg_none
+exe "hi! typescriptPredefinedType"					.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
-exe "hi! typescriptBrowserObjects"					.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptHtmlElemProperties"			.s:fmt_none		.s:fg_blu_bright		.s:bg_none
+exe "hi! typescriptAccessibilityModifier"		.s:fmt_none		.s:fg_grn_normal		.s:bg_none
+exe "hi! typescriptClassName"								.s:fmt_none		.s:fg_blu_normal		.s:bg_none
 
-exe "hi! typescriptRegexpString"						.s:fmt_none		.s:fg_red_bright		.s:bg_none
-exe "hi! typescriptNumber"									.s:fmt_none		.s:fg_red_bright		.s:bg_none
-exe "hi! typescriptFloat"										.s:fmt_none		.s:fg_red_bright		.s:bg_none
-exe "hi! typescriptSpecial"									.s:fmt_none		.s:fg_red_bright		.s:bg_none
-exe "hi! typescriptBoolean"									.s:fmt_none		.s:fg_red_bright		.s:bg_none
 
-exe "hi! typescriptComment"									.s:fmt_ital		.s:fg_blk_bright		.s:bg_none
-exe "hi! typescriptDocComment"							.s:fmt_ital		.s:fg_blk_bright		.s:bg_none
-exe "hi! typescriptDocTags"									.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptDocSeeTag"								.s:fmt_none		.s:fg_yel_bright		.s:bg_none
-exe "hi! typescriptDocParam"								.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptParens"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptBraces"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptAssign"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptTernaryOp"								.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptBinaryOp"								.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptEndColons"								.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptUnaryOp"									.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptRestOrSpread"						.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptObjectColon"							.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptObjectSpread"						.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+exe "hi! typescriptReturnAnnotation"				.s:fmt_none		.s:fg_mag_bright		.s:bg_none
+
 "
 "
 "}}}

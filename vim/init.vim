@@ -20,7 +20,7 @@ function! g:Importrc(name)																					" import rc file method
 	execute "source ".g:devtools_path."/vim/vimrc/".a:name
 endfunction
 
-call Importrc("ocaml.vim")																					" ocaml setup
+"call Importrc("ocaml.vim")																					" ocaml setup
 "call Importrc("templates.vim")																			" open new files with templates
 
 " ----------- IMPORT PLUGINS ------------ "
@@ -111,14 +111,25 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set background=dark																" default to dark background
-colorscheme material  														" color scheme for editor
+"colorscheme solarized  														" color scheme for editor
+"colorscheme materialenhanced
+"colorscheme VisualStudioDark
+"colorscheme grb256
+"colorscheme github
+"colorscheme spacegray
+"colorscheme twilight
+"colorscheme default
+colorscheme vim_default
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-execute "source ~/devtools/vim/autoload/airline/themes/material.vim"
-let g:airline_theme = 'material'
+"execute 'source ~/devtools/vim/autoload/airline/themes/material.vim'
+"let g:airline_theme = 'material'
+let g:airline_theme = 'solarized'
+"let g:airline_theme = 'archery'
+"let g:airline_theme = 'papercolor'
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 
@@ -131,7 +142,7 @@ let g:airline#extensions#ale#enabled = 1
 "let g:airline#extensions#tabline#right_alt_sep = '⮃'
   
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
   
 let g:airline_left_sep = '⮀'
@@ -184,12 +195,14 @@ set autoindent																		" auto indent code
 au FileType javascript setl fen
 au FileType javascript setl nocindent
 
-au FileType javascript imap <c-t> console.log();<esc>hi
+"au FileType javascript imap <c-t> console.log();<esc>hi
 
-au FileType javascript inoremap <buffer> $r return 
-au FileType javascript inoremap <buffer> $f //--- PH<esc>FP2xi
+"au FileType javascript inoremap <buffer> $r return 
+"au FileType javascript inoremap <buffer> $f //--- PH<esc>FP2xi
 
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
+
+"autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescript
 
 autocmd BufRead,BufNewFile *.toml set filetype=gitconfig
 autocmd BufRead,BufNewFile .flowconfig set filetype=config
@@ -255,6 +268,7 @@ map <leader>lt :tabnew<Up>
 " -- faster error nav with ale
 nmap <leader>= <Plug>(ale_next_wrap)
 nmap <leader>- <Plug>(ale_previous_wrap)
+nmap <leader>] <Plug>(ale_detail)
 
 " -- faster edit and reload of vimrc
 "map <leader>e :e! ~/devtools/vim/init.vim<cr>

@@ -59,33 +59,95 @@ syn region	jsBoldComment						contained start="`[^`]"rs=s+1		end="\(``\)\@<!`"
 
 syn cluster jsDocs                  contains=javascriptDocParamType,javascriptDocNamedParamType,javascriptDocParam
 
+" N_BLK		Ignore
+" B_BLK
+" N_RED
+" B_RED		Error (background) 
+" N_GRN
+" B_GRN
+" N_YEL				
+" B_YEL		Statement, Exception, Keyword, Label, Repeat, Operator, Todo (background), Search (background)
+" N_BLU
+" B_BLU		NonText
+" N_MAG
+" B_MAG		Boolean, Number, String, Constant, Character
+" N_CYN 
+" B_CYN		Function, Comment, Identifier
+" N_WHT
+" B_WHT 
+
+" CONSTANT COLORS
+" ---------------
+" BLUE:				PreProc, Include, Define, Macro, SpecialKey,
+"							PreCondit
+" CYAN:				Directory
+" GREEN:			Type, Structure, Question, StorageClass
+" WHITE/RED:	Special, SpecialChar, SpecialComment, Delimiter, Tag, Debug,
+"							WarningMsg
+" FOREGROUND: Normal, Noise
+" GREY:				Visual (background), Conceal (background)
+" PINK:				Title
+
 
 " links
 "
-hi def link jsOperatorSign					Type
+" hi def link jsOperatorSign					Type
 
-"hi def link jsObjectFuncName				Function
+hi! link		jsGlobalObjects					Structure
+hi! link		jsGlobalNodeObjects			Structure
+hi! link		jsExceptions						Structure
+hi! link		jsOperatorKeyword				Statement
 
-hi def link jsComment								Comment
-hi def link jsDocs									Comment
+hi! link		jsThis									SpecialChar
+hi! link		jsSuper									jsThis
+hi! link		jsExportDefault					Label
 
-"hi def link jsDocComment						Comment
+hi! link		jsException							Operator
+hi! link		jsTry										Operator
+hi! link		jsCatch									Operator
+hi! link		jsFinally								Operator
+hi! link		jsStorageClass					Operator
+hi! link		jsConditional						Operator
+
+hi! link		jsSpreadOperator				Macro
+hi! link		jsRestOperator					Macro
+
+hi! link		jsFunction							Function
+hi! link		jsFuncName							Normal
+hi! link		jsFuncCall							Normal
+hi! link		jsFuncArgs							PreProc
+
+hi! link		jsFuncBraces						jsBraces
+hi! link		jsIfElseBraces					jsBraces 
+hi! link		jsClassBraces						jsBraces
+hi! link		jsTryCatchBraces				jsBraces 
+hi! link		jsModuleBraces					jsBraces 
+hi! link		jsObjectBraces					jsBraces 
+hi! link		jsObjectSeparator				jsBraces 
+hi! link		jsFinallyBraces					jsBraces 
+hi! link		jsRepeatBraces					jsBraces
+hi! link		jsSwitchBraces					jsBraces
+hi! link		jsDestructuringBraces		jsBraces
+
+hi! link		jsBraces								Operator
+hi! link		jsBracket								Operator 
+hi! link		jsParens								Operator
+hi! link		jsFuncParens						Operator
+hi! link		jsBrackets							Operator
+hi! link		jsArrowFunction					Operator
+
+hi! link		jsClassNoise						Noise
+
+hi! link		jsComment								Comment
+hi def link jsDocs									jsComment
 hi def link jsLineComment						jsComment
-
-hi def link jsDocNotation						SpecialComment
-hi def link jsDocTags								SpecialComment
-
-"hi def link jsDocNGParam						jsDocParam
-
-hi def link jsDocParam							Function
-
-"hi def link jsDocNumParam						Function
-"hi def link jsDocEventRef						Function
-
-hi def link jsDocNamedParamType			Type
-hi def link jsDocParamName					Type
-hi def link jsDocParamType					Type
-hi def link jsCodeComment						Comment
-hi def link jsBoldComment						Comment
+hi def link jsDocNotation						PreProc
+hi def link jsDocTags								PreProc
+hi def link jsDocParam							PreCondit
+hi def link jsDocNamedParamType			PreCondit
+hi def link jsDocParamName					Macro
+hi def link jsDocParamType					PreCondit
+hi def link jsCodeComment						jsComment
+hi def link jsBoldComment						jsComment
 
 
