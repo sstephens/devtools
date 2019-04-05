@@ -91,12 +91,13 @@ syn cluster jsDocs                  contains=javascriptDocParamType,javascriptDo
 
 " links
 "
-" hi def link jsOperatorSign					Type
+" hi! link		jsOperatorSign					Operator
 
-hi! link		jsGlobalObjects					Structure
-hi! link		jsGlobalNodeObjects			Structure
-hi! link		jsExceptions						Structure
+hi! link		jsGlobalObjects					SpecialChar
+hi! link		jsGlobalNodeObjects			SpecialChar
+hi! link		jsExceptions						SpecialChar
 hi! link		jsOperatorKeyword				Statement
+hi! link		jsBuiltins							SpecialChar
 
 hi! link		jsThis									SpecialChar
 hi! link		jsSuper									jsThis
@@ -129,12 +130,13 @@ hi! link		jsRepeatBraces					jsBraces
 hi! link		jsSwitchBraces					jsBraces
 hi! link		jsDestructuringBraces		jsBraces
 
-hi! link		jsBraces								Operator
-hi! link		jsBracket								Operator 
-hi! link		jsParens								Operator
-hi! link		jsFuncParens						Operator
-hi! link		jsBrackets							Operator
+hi! link		jsBraces								Tag
+hi! link		jsBracket								Tag
+hi! link		jsBrackets							Tag
 hi! link		jsArrowFunction					Operator
+
+hi! link		jsParens								Tag
+hi! link		jsFuncParens						Tag
 
 hi! link		jsClassNoise						Noise
 
@@ -151,3 +153,14 @@ hi def link jsCodeComment						jsComment
 hi def link jsBoldComment						jsComment
 
 
+"
+" ---- JSX -------
+"
+hi! link		xmlString								String
+hi! link		xmlTagName							Macro
+hi! link		xmlTag									Tag
+hi! link		xmlEndTag								Tag
+hi! link		xmlAttrib								Label
+
+hi! link		jsxChild								Magenta
+hi! link		jsxRegion								Operator

@@ -11,9 +11,28 @@ endif
 
 " -- set plugin options
 let g:ctrlp_working_path_mode = 'r'			" Set ctrl-p working path
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+let g:ctrlp_switch_buffer = 'ET'
 let g:ctrlp_tabpage_position = 'ac'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_open_multiple_files = 't'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+
+" Create a command to directly call the new search type
+"
+" Put this in vimrc or plugin/gitgrep.vim
+command! CtrlPGitGrep call ctrlp#gitgrep#grep_search()
+command! CtrlPGitLs call ctrlp#gitgrep#ls_search()
+
+" -- mappings
+" let g:ctrlp_map = '<leader>p'
+nmap <leader>p :CtrlP<cr>
+nmap <leader>g :CtrlPGitGrep<cr>
+nmap <leader>l :CtrlPGitLs<cr>
+
+
+"let g:ctrlp_extensions = get(g:, 'ctrlp_extensions', [])
+"let g:ctrlp_extensions = g:ctrlp_extensions + ['gitgrep']
+" let g:ctrlp_match_func = { 'match': 'ctrlp#gitgrep#matcher' }
   
 let g:ctrlp_prompt_mappings = {
 	\ 'PrtBS()':              ['<bs>', '<c-]>'],
@@ -51,3 +70,4 @@ let g:ctrlp_prompt_mappings = {
 	\ 'OpenMulti()':          ['<c-o>'],
 	\ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
 \ }
+

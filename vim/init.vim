@@ -111,59 +111,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set background=dark																" default to dark background
-"colorscheme solarized  														" color scheme for editor
-"colorscheme materialenhanced
-"colorscheme VisualStudioDark
-"colorscheme grb256
-"colorscheme github
-"colorscheme spacegray
-"colorscheme twilight
-"colorscheme default
-colorscheme vim_default
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-"execute 'source ~/devtools/vim/autoload/airline/themes/material.vim'
-"let g:airline_theme = 'material'
-let g:airline_theme = 'solarized'
-"let g:airline_theme = 'archery'
-"let g:airline_theme = 'papercolor'
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-
-"let g:airline#extensions#tabline#left_sep = '⮀'
-"let g:airline#extensions#tabline#left_alt_sep = '⮁'
-"let g:airline#extensions#tabline#right_sep = '⮂'
-"let g:airline#extensions#tabline#right_alt_sep = '⮃'
-  
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-  
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline_symbols.maxlinenr = '㏑'
-
-"let g:airline_section_warning = ''
-"let g:airline_section_c = ''
-
-
-" ---------- DART Settings ---------"
-"let dart_html_in_string=v:true
-"let dart_corelib_highlight=v:true
-"let dart_style_guide=2
-"let dart_format_on_save=1
-
+colorscheme vim_default														" color scheme for editor
 
 " ---------- FILES AND BACKUPS ------ "
 set nobackup																			" turn backup off 
@@ -195,13 +143,7 @@ set autoindent																		" auto indent code
 au FileType javascript setl fen
 au FileType javascript setl nocindent
 
-"au FileType javascript imap <c-t> console.log();<esc>hi
-
-"au FileType javascript inoremap <buffer> $r return 
-"au FileType javascript inoremap <buffer> $f //--- PH<esc>FP2xi
-
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
-
 "autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescript
 
 autocmd BufRead,BufNewFile *.toml set filetype=gitconfig
@@ -211,7 +153,6 @@ autocmd BufRead,BufNewFile .babelrc set filetype=json
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0 
-"autocmd BufRead,BufNewFile *.{js,jsx} set filetype=javascript
 
 "
 " ---------------------- CSS Section --------------------
@@ -223,8 +164,8 @@ autocmd FileType css set iskeyword+=-
 " ---------------------- SASS Section --------------------
 "
 autocmd FileType scss set iskeyword+=-
-"autocmd FileType scss set omnifunc=csscomplete#CompleteCSS		
 autocmd BufRead,BufNewFile *.scss set filetype=scss
+"autocmd FileType scss set omnifunc=csscomplete#CompleteCSS		
 
 "
 " ---------------------- KOTLIN --------------------------
@@ -258,17 +199,14 @@ autocmd BufRead,BufNewFile *.scss set filetype=scss
 " --- key mappings for quicker actions ---
 "
 
-" -- faster editor config --
-nmap <leader>ed :tabnew .editorconfig<cr>
+"-- close preview window
+nmap <leader>pc :pclose<cr>
 
-" -- faster tab opening
-map <leader>t :tabnew 
-map <leader>lt :tabnew<Up>
+"-- exit paste mode
+nmap <leader>np :set nopaste<cr>
 
-" -- faster error nav with ale
-nmap <leader>= <Plug>(ale_next_wrap)
-nmap <leader>- <Plug>(ale_previous_wrap)
-nmap <leader>] <Plug>(ale_detail)
+"-- better window management
+nmap <leader>w <c-w>
 
 " -- faster edit and reload of vimrc
 "map <leader>e :e! ~/devtools/vim/init.vim<cr>
@@ -279,19 +217,7 @@ nmap <leader>] <Plug>(ale_detail)
 "map <C-L> x<Esc><Esc>
 
 " -- Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+nmap <leader>m mmHmt:%s/<c-v><cr>//ge<cr>'tzt'm
 
-
-" -- short hand code 
-iab clog console.log(
-
-
-" Bash like keys for the command line
-"cnoremap <C-A>		<Home>
-"cnoremap <C-E>		<End>
-"cnoremap <C-K>		<C-U>
-"cnoremap <C-P>		<Up>
-"cnoremap <C-N>		<Down>
-
-
-"set rtp+=/usr/local/opt/fzf																					" enable fuzzy finder
+imap <leader>cl <c-o><plug>NERDCommenterAlignLeft
+imap <leader>cu <c-o><plug>NERDCommenterUncomment

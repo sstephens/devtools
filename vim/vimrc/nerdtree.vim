@@ -13,7 +13,7 @@ else
 endif
 
 " -- set plugin options
-nmap <C-n> :NERDTreeToggle<CR>						" remap nerdtree open window key
+nmap <leader>nn :NERDTreeToggle<CR>				" remap nerdtree open window key
 "set winfixwidth													" keep window fixed for nerdtree
 
 let g:NERDTreeQuitOnOpen = 1

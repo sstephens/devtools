@@ -18,12 +18,19 @@ exe "hi! Cyan term=NONE ctermfg=14 guifg=Cyan gui=NONE"
 exe "hi! White term=NONE ctermfg=15 guifg=White gui=NONE"	
 
 exe "hi! BlueHighlight ctermfg=45 guifg=#00d7ff"
-exe "hi! YellowHighlight ctermfg=228 guifg=#ffff7e"
-exe "hi! GreenHighlight ctermfg=114 guifg=#59d900"
-exe "hi! Comment ctermfg=242 guifg=#6c6c6c"
+exe "hi! YellowHighlight ctermfg=228 guifg=#ffff87"
+exe "hi! RedHighlight ctermfg=167 guifg=#d75f5e"
+exe "hi! GreenHighlight ctermfg=47 guifg=#01ff5f"
+exe "hi! CyanHighlight ctermfg=87 guifg=#5fffff"
 
-exe "hi! RedBackground ctermfg=255 ctermbg=52 guifg=#ffffff guibg=#810313"
-exe "hi! YellowBackground ctermfg=0 ctermbg=221 guifg=#ffffff guibg=#eabb61"
+exe "hi! RedBackground ctermfg=256 ctermbg=52 guifg=#ffffff guibg=#5f0000"
+exe "hi! LightRedBackground ctermfg=256 ctermbg=124 guifg=#ffffff guibg=#af0000"
+exe "hi! YellowBackground ctermfg=0 ctermbg=221 guifg=#000000 guibg=#ffd75f"
+exe "hi! BlueBackground ctermfg=252 ctermbg=27 guifg=#d0d0d0 guibg=#005fff"
+exe "hi! PurpleBackground ctermfg=252 ctermbg=54 guifg=#d0d0d0 guibg=#5f0087"
+
+exe "hi! DimBlue ctermfg=80 ctermbg=25 guifg=#5fd7d7 guibg=#005faf"
+exe "hi! DimBlueYellow ctermfg=220 ctermbg=25 guifg=#ffd600 guibg=#005faf"
 
 " menu settings
 exe "hi! WildMenu term=NONE ctermbg=4 ctermfg=7 guibg=DarkBlue guibg=Gray"
@@ -31,20 +38,47 @@ exe "hi! PMenu term=NONE ctermbg=4 ctermfg=7 guibg=DarkBlue guibg=Gray"
 exe "hi! PmenuSel term=NONE ctermbg=0 ctermfg=7 guibg=Black guibg=Gray"
 
 
+"exe \"hi! FoldColumn term=NONE ctermbg=247 ctermfg=233 guibg=#cccccc guifg=#6c6c6c"
+exe "hi! Folded term=NONE ctermbg=247 ctermfg=233 guibg=#9e9e9e guifg=#121212"
+
+exe "hi! Comment ctermfg=242 guifg=#6c6c6c"
+exe "hi! Tag ctermfg=143 guifg=#afaf5f"
+exe "hi! Cursor term=NONE ctermbg=254 ctermfg=232 guibg=#dddddd guifg=#080808"					
+
 " Settings that will not change according to the
 " terminal color settings
+hi! link lCursor						Cursor
+hi! link CursorLine					DimBlue
+hi! link CtrlPMatch					YellowHighlight
+hi! link VertSplit					DimBlue
+hi! link MatchParen					DimBlueYellow
+hi! link vimMapModKey				YellowHighlight
+
+"hi! link Visual							BlueHighlight
+
 hi! link PreProc						BlueHighlight
 hi! link PreCondit					GreenHighlight
 hi! link Macro							YellowHighlight
+hi! link SpecialChar				CyanHighlight
 
-hi! link ErrorMsg						RedBackground
+hi! link ErrorMsg						LightRedBackground
 hi! link WarningMsg					YellowBackground
 hi! link Todo								WarningMsg
 hi! link Debug							YellowBackground 
 
+hi! link ALEInfo						BlueBackground
+hi! link ALEInfoSign				BlueBackground
 hi! link ALEError						ErrorMsg
+hi! link ALEErrorSign				LightRedBackground
+hi! link ALEErrorLine				RedBackground
+hi! link ALEStyleError			PurpleBackground
 hi! link ALEWarning					WarningMsg
 hi! link ALEWarningSign			WarningMsg
+
+hi! link DiffAdd						DimBlueYellow
+hi! link DiffChange					DimBlue
+hi! link DiffText						DimBlueYellow
+hi! link DiffDelete					RedHighlight
 
 
 " Settings that will vary with terminal colors
@@ -64,21 +98,19 @@ hi! link Identifier					DarkGreen
 
 hi! link Label							Blue
 
-hi! link Number							Red
-hi! link Boolean						Red
-hi! link String							Red
+hi! link Number							RedHighlight
+hi! link Boolean						RedHighlight
+hi! link String							RedHighlight
 
 hi! link Special						DarkBlue
 hi! link Character					DarkBlue
 
-hi! link SpecialChar				Cyan
-hi! link SpecialKey					Magenta
-hi! link NonText						DarkMagenta
+hi! link SpecialKey					Cyan
+hi! link NonText						DarkCyan
 
 hi! link Error							DarkRed
 hi! link Exception					DarkRed
 
 hi! link Ignore							Black
-" hi! link Comment						DarkGrey
-hi! link SpecialComment			DarkCyan
+hi! link SpecialComment			DarkMagenta
 
