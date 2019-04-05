@@ -37,16 +37,16 @@ execute 'set rtp+='.$HOME.'/devtools/vim/after'
 if has("mac")																												"mac terminal settings
 	if g:devtools_iterm2
 		if !has('nvim')
-			set term=xterm-256color
+			set term=xterm-256color 
 		endif
 	else
-		set term=builtin_ansi
+		set term=builtin_ansi 
 	endif
 endif
 
-if !exists("g:syntax_on")																						" Turn on syntax highlighting
-	syntax enable
-endif
+"if !exists("g:syntax_on")																						" Turn on syntax highlighting
+syntax enable
+"endif
 
 "
 " --- VIM USABILITY HELPERS ---
@@ -54,15 +54,15 @@ endif
 
 " Set font according to system
 if has("mac") || has("macunix")
-	set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+	set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15 
 elseif has("win16") || has("win32")
-	set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
+	set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11 
 elseif has("gui_gtk2")
-	set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+	set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11 
 elseif has("linux")
-	set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+	set gfn=IBM\ Plex\ Mono:h14,:Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11 
 elseif has("unix")
-	set gfn=Monospace\ 11
+	set gfn=Monospace\ 11 
 endif
 
 "set gfn=~/devtools/Monaco-Powerline.otf
@@ -76,7 +76,7 @@ autocmd GUIEnter * set visualbell t_vb=						" remove error bells visual cues
 
 if !has('nvim')
 	if g:devtools_iterm2
-		set ttymouse=xterm2
+		set ttymouse=xterm2 
 	endif
 endif
 	
@@ -90,11 +90,12 @@ set splitright																		" split windows default to the right
 set number																				" show line numbers
 set scrolloff=10																	" keeps the cursor 5 lines from the bottom of the page
 set laststatus=2																	" always show status line
-set showtabline=2
+set showtabline=2 
 
 set showmatch																			" show matching brackets
 set incsearch																			" better word searching
-set nohlsearch
+set hlsearch
+nmap <leader>hh :nohlsearch<cr>
 
 set ignorecase																		" case insensitive search
 set smartcase																			" add case sensitive search when capitol letter is typed
@@ -102,7 +103,7 @@ set smartcase																			" add case sensitive search when capitol letter 
 set autoread																			" reload file if another source changes it
 
 "set fillchars+=stl:\ ,stlnc:\
-set ffs=unix,mac,dos
+set ffs=unix,mac,dos 
 
 
 " ------- COLOR AND FONTS ---------- "
@@ -111,7 +112,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set background=dark																" default to dark background
-colorscheme vim_default														" color scheme for editor
+colorscheme vim_default 													" color scheme for editor
 
 " ---------- FILES AND BACKUPS ------ "
 set nobackup																			" turn backup off 
@@ -146,10 +147,10 @@ au FileType javascript setl nocindent
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
 "autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescript
 
-autocmd BufRead,BufNewFile *.toml set filetype=gitconfig
-autocmd BufRead,BufNewFile .flowconfig set filetype=config
-autocmd BufRead,BufNewFile .editorconfig set filetype=config
-autocmd BufRead,BufNewFile .babelrc set filetype=json
+autocmd BufRead,BufNewFile *.toml set filetype=gitconfig 
+autocmd BufRead,BufNewFile .flowconfig set filetype=config 
+autocmd BufRead,BufNewFile .editorconfig set filetype=config 
+autocmd BufRead,BufNewFile .babelrc set filetype=json 
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0 
@@ -157,14 +158,14 @@ let g:jsx_ext_required = 0
 "
 " ---------------------- CSS Section --------------------
 "
-autocmd FileType css set iskeyword+=-
+autocmd FileType css set iskeyword+=- 
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS		
 
 "
 " ---------------------- SASS Section --------------------
 "
-autocmd FileType scss set iskeyword+=-
-autocmd BufRead,BufNewFile *.scss set filetype=scss
+autocmd FileType scss set iskeyword+=- 
+autocmd BufRead,BufNewFile *.scss set filetype=scss 
 "autocmd FileType scss set omnifunc=csscomplete#CompleteCSS		
 
 "
@@ -219,5 +220,7 @@ nmap <leader>w <c-w>
 " -- Remove the Windows ^M - when the encodings gets messed up
 nmap <leader>m mmHmt:%s/<c-v><cr>//ge<cr>'tzt'm
 
-imap <leader>cl <c-o><plug>NERDCommenterAlignLeft
-imap <leader>cu <c-o><plug>NERDCommenterUncomment
+"imap <leader>cl <c-o><plug>NERDCommenterAlignLeft
+"imap <leader>cu <c-o><plug>NERDCommenterUncomment
+
+

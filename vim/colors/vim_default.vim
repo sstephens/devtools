@@ -20,7 +20,7 @@ exe "hi! White term=NONE ctermfg=15 guifg=White gui=NONE"
 exe "hi! BlueHighlight ctermfg=45 guifg=#00d7ff"
 exe "hi! YellowHighlight ctermfg=228 guifg=#ffff87"
 exe "hi! RedHighlight ctermfg=167 guifg=#d75f5e"
-exe "hi! GreenHighlight ctermfg=47 guifg=#01ff5f"
+exe "hi! GreenHighlight ctermfg=106 guifg=#87af00"
 exe "hi! CyanHighlight ctermfg=87 guifg=#5fffff"
 
 exe "hi! RedBackground ctermfg=256 ctermbg=52 guifg=#ffffff guibg=#5f0000"
@@ -48,6 +48,7 @@ exe "hi! Cursor term=NONE ctermbg=254 ctermfg=232 guibg=#dddddd guifg=#080808"
 " Settings that will not change according to the
 " terminal color settings
 hi! link lCursor						Cursor
+hi! link Delimiter					Tag
 hi! link CursorLine					DimBlue
 hi! link CtrlPMatch					YellowHighlight
 hi! link VertSplit					DimBlue
