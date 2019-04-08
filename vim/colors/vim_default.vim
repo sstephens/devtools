@@ -55,7 +55,7 @@ hi! link VertSplit					DimBlue
 hi! link MatchParen					DimBlueYellow
 hi! link vimMapModKey				YellowHighlight
 
-hi! link Visual							Magenta
+hi! link Visual							BlueBackground
 hi! link Constant						Magenta
 
 hi! link PreProc						BlueHighlight
