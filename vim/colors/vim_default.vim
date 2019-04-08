@@ -23,8 +23,8 @@ exe "hi! RedHighlight ctermfg=167 guifg=#d75f5e"
 exe "hi! GreenHighlight ctermfg=106 guifg=#87af00"
 exe "hi! CyanHighlight ctermfg=87 guifg=#5fffff"
 
-exe "hi! RedBackground ctermfg=256 ctermbg=52 guifg=#ffffff guibg=#5f0000"
-exe "hi! LightRedBackground ctermfg=256 ctermbg=124 guifg=#ffffff guibg=#af0000"
+exe "hi! RedBackground ctermfg=255 ctermbg=52 guifg=#ffffff guibg=#5f0000"
+exe "hi! LightRedBackground ctermfg=255 ctermbg=124 guifg=#ffffff guibg=#af0000"
 exe "hi! YellowBackground ctermfg=0 ctermbg=221 guifg=#000000 guibg=#ffd75f"
 exe "hi! BlueBackground ctermfg=252 ctermbg=27 guifg=#d0d0d0 guibg=#005fff"
 exe "hi! PurpleBackground ctermfg=252 ctermbg=54 guifg=#d0d0d0 guibg=#5f0087"
@@ -55,7 +55,8 @@ hi! link VertSplit					DimBlue
 hi! link MatchParen					DimBlueYellow
 hi! link vimMapModKey				YellowHighlight
 
-"hi! link Visual							BlueHighlight
+hi! link Visual							Magenta
+hi! link Constant						Magenta
 
 hi! link PreProc						BlueHighlight
 hi! link PreCondit					GreenHighlight
@@ -73,7 +74,7 @@ hi! link ALEError						ErrorMsg
 hi! link ALEErrorSign				LightRedBackground
 hi! link ALEErrorLine				RedBackground
 hi! link ALEStyleError			PurpleBackground
-hi! link ALEWarning					WarningMsg
+hi! link ALEWarning					Normal
 hi! link ALEWarningSign			WarningMsg
 
 hi! link DiffAdd						DimBlueYellow
@@ -113,5 +114,5 @@ hi! link Error							DarkRed
 hi! link Exception					DarkRed
 
 hi! link Ignore							Black
-hi! link SpecialComment			DarkMagenta
+hi! link SpecialComment			PreCondit
 

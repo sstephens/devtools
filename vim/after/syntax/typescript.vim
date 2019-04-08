@@ -13,59 +13,60 @@ hi! link typescriptEndColons								Normal
 hi! link typescriptLabel										Normal
 hi! link typescriptOperator									Identifier
 
-hi! link typescriptImport										Operator
-hi! link typescriptExport										Operator
+hi! link typescriptImport										Tag
+hi! link typescriptExport										Tag
 hi! link typescriptModule										Operator
 hi! link typescriptAmbientDeclaration       Operator
 hi! link typescriptForOperator							Operator
 hi! link typescriptKeywordOp								Operator
-hi! link typescriptConditional							Operator 
-hi! link typescriptRepeat										Operator 
-hi! link typescriptCase											Operator 
+hi! link typescriptConditional							Tag
+hi! link typescriptRepeat										tag
+hi! link typescriptCase											Tag
 hi! link typescriptCastKeyword							Operator
 hi! link typescriptArrowFunc								Operator
-hi! link typescriptParens										Tag
-hi! link typescriptBraces										Tag
 hi! link typescriptBinaryOp									Operator
 hi! link typescriptAssign										Operator
 hi! link typescriptTernaryOp								Operator
 hi! link typescriptExceptions								Operator
 hi! link typescriptTry											Operator 
 
+hi! link typescriptParens										Tag
+hi! link typescriptBraces										Tag
+
 hi! link typescriptPrototype								Label
 hi! link typescriptDefault									Label
-hi! link typescriptAccessibilityModifier		PreProc
+hi! link typescriptAccessibilityModifier		SpecialChar
 
-" get | set accessors
 hi! link typescriptClassName								Normal
 hi! link typescriptMember										Normal
 hi! link typescriptFuncName									Normal
-hi! link typescriptParenExp									Normal 
+"hi! link typescriptParenExp									Macro
+hi! link typescriptObjectLabel							Normal
 
 hi! link typescriptMethodAccessor						Statement
 hi! link typescriptClassStatic							Statement
 hi! link typescriptStatementKeyword					Statement
 
-hi! link typescriptES6MapProp								SpecialChar
-hi! link typescriptRegExpProp								SpecialChar
-hi! link typescriptES6SetProp								SpecialChar
-hi! link typescriptDOMDocProp								SpecialChar
-hi! link typescriptProxyAPI									SpecialChar
-hi! link typescriptDOMEventProp							SpecialChar
-hi! link typescriptDOMNodeProp							SpecialChar
-hi! link typescriptDOMStorageProp						SpecialChar
-hi! link typescriptDOMElemAttrs							SpecialChar
-hi! link typescriptMathStaticProp						SpecialChar
-hi! link typescriptNumberStaticProp					SpecialChar
-hi! link typescriptRegExpStaticProp					SpecialChar
-hi! link typescriptSymbolStaticProp					SpecialChar
-hi! link typescriptXHRProp									SpecialChar
-hi! link typescriptRequestProp							SpecialChar
-hi! link typescriptResponseProp							SpecialChar
-hi! link typescriptBOMWindowProp						SpecialChar
-hi! link typescriptCryptoProp								SpecialChar
-hi! link typescriptFileReaderProp						SpecialChar
-hi! link typescriptURLUtilsProp							SpecialChar
+hi! link typescriptES6MapProp								Structure
+hi! link typescriptRegExpProp								Structure
+hi! link typescriptES6SetProp								Structure
+hi! link typescriptDOMDocProp								Structure
+hi! link typescriptProxyAPI									Structure
+hi! link typescriptDOMEventProp							Structure
+hi! link typescriptDOMNodeProp							Structure
+hi! link typescriptDOMStorageProp						Structure
+hi! link typescriptDOMElemAttrs							Structure
+hi! link typescriptMathStaticProp						Structure
+hi! link typescriptNumberStaticProp					Structure
+hi! link typescriptRegExpStaticProp					Structure
+hi! link typescriptSymbolStaticProp					Structure
+hi! link typescriptXHRProp									Structure
+hi! link typescriptRequestProp							Structure
+hi! link typescriptResponseProp							Structure
+hi! link typescriptBOMWindowProp						Structure
+hi! link typescriptCryptoProp								Structure
+hi! link typescriptFileReaderProp						Structure
+hi! link typescriptURLUtilsProp							Structure
 
 hi! link typescriptObjectMethod							Macro
 hi! link typescriptDOMStorageMethod					Macro
@@ -109,7 +110,6 @@ hi! link typescriptBlobMethod								Macro
 hi! link typescriptURLStaticMethod					Macro
 hi! link typescriptGeolocationMethod				Macro
 
-
 hi! link typescriptAbstract									Function 
 hi! link typescriptClassKeyword							Function 
 hi! link typescriptFuncKeyword							Function
@@ -117,14 +117,22 @@ hi! link typescriptAliasKeyword							Function
 hi! link typescriptInterfaceKeyword					Function 
 hi! link typescriptEnumKeyword							Function 
 
-" " " ts func params
-hi! link typescriptCall											PreProc
+" template strings
+hi! link typescriptTemplate									String
+hi! link typescriptTemplateSB								Tag
+"hi! link typescriptTemplateSubstitution			PreProc
 
-" " " ts types
-hi! link typescriptFuncTypeArrow						Type
+" ts func params
+hi! link typescriptCall											PreProc
+hi! link typescriptParamImpl								PreProc
+hi! link typescriptArrowFuncArg							PreProc
+hi! link typescriptFuncType									PreProc
+
+" ts types
+hi! link typescriptFuncTypeArrow						Tag
 hi! link typescriptStringLiteralType				Type
 hi! link typescriptTypeReference						Type
-hi! link typescriptPredefinedType						Type
+hi! link typescriptPredefinedType						SpecialChar
 hi! link typescriptObjectType								Type
 hi! link typescriptTupleType								Type
 hi! link typescriptTypeParameter						Type
@@ -134,20 +142,20 @@ hi! link typescriptClassTypeArguments				Type
 hi! link typescriptTypeBracket							Type
 hi! link typescriptProperty									Type
 
-hi! link typescriptTypeAnnotation						PreProc
-hi! link typescriptOptionalMark							PreProc
-hi! link typescriptObjectColon							PreProc
+hi! link typescriptTypeAnnotation						Tag
+hi! link typescriptOptionalMark							Tag
+hi! link typescriptObjectColon							Tag
 
-hi! link typescriptTypeBrackets							Operator
-hi! link typescriptUnion										Operator
-
-hi! link typescriptObjectSpread							Macro
-hi! link typescriptMappedIn									Macro 
-hi! link typescriptTypeQuery								Macro
-hi! link typescriptConstructorType					Macro
-hi! link typescriptUserDefinedType					Macro 
-hi! link typescriptConstraint								Macro
-hi! link typescriptBranch										Macro
+hi! link typescriptTypeBrackets							Tag
+hi! link typescriptInterfaceTypeParameter		Tag
+hi! link typescriptInterfaceTypeArguments		Tag
+hi! link typescriptUnion										Tag
+hi! link typescriptObjectSpread							Tag
+hi! link typescriptMappedIn									Tag 
+hi! link typescriptTypeQuery								Tag
+hi! link typescriptConstructorType					Tag
+hi! link typescriptUserDefinedType					Tag
+hi! link typescriptConstraint								Tag
 
 hi! link typescriptAliasDeclaration					Normal
 hi! link typescriptInterfaceName						Normal
@@ -161,11 +169,9 @@ hi! link typescriptDocParamType							PreCondit
 hi! link typescriptDocParam									Cyan
 hi! link typescriptRef											SpecialComment 
 
-hi! link typescriptFuncImpl									Magenta
-hi! link typescriptParamImpl								Magenta
-hi! link typescriptFuncCall									Magenta
-hi! link typescriptIndexSignature						Magenta
-hi! link typescriptTypeOperator							Magenta
-hi! link typescriptFunctionMethod						Magenta
-hi! link typescriptCallImpl									Magenta
+" hi! link typescriptProp											Magenta
+" hi! link typescriptDefaultParam							Magenta
+" hi! link typescriptFuncImpl									Magenta
+" hi! link typescriptCallImpl									Magenta
+" hi! link typescriptFuncCall									Magenta
 

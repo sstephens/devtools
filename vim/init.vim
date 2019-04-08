@@ -94,8 +94,9 @@ set showtabline=2
 
 set showmatch																			" show matching brackets
 set incsearch																			" better word searching
-set hlsearch
-nmap <leader>hh :nohlsearch<cr>
+set nohlsearch
+nmap <leader>hh :hlsearch<cr>
+nmap <leader>nh :hlsearch<cr>
 
 set ignorecase																		" case insensitive search
 set smartcase																			" add case sensitive search when capitol letter is typed

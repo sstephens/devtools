@@ -93,22 +93,26 @@ syn cluster jsDocs                  contains=javascriptDocParamType,javascriptDo
 "
 " hi! link		jsOperatorSign					Operator
 
-hi! link		jsGlobalObjects					SpecialChar
-hi! link		jsGlobalNodeObjects			SpecialChar
-hi! link		jsExceptions						SpecialChar
+hi! link		jsGlobalObjects					Structure
+hi! link		jsGlobalNodeObjects			Structure
+hi! link		jsExceptions						Structure
 hi! link		jsOperatorKeyword				Statement
-hi! link		jsBuiltins							SpecialChar
+hi! link		jsBuiltins							Structure
 
-hi! link		jsThis									SpecialChar
+hi! link		jsImport								Tag
+hi! link		jsExport								jsImport 
+hi! link		jsFrom									jsImport
+
+hi! link		jsThis									PreCondit
 hi! link		jsSuper									jsThis
 hi! link		jsExportDefault					Label
 
 hi! link		jsException							Operator
-hi! link		jsTry										Operator
-hi! link		jsCatch									Operator
+hi! link		jsTry										Tag
+hi! link		jsCatch									Tag
 hi! link		jsFinally								Operator
 hi! link		jsStorageClass					Operator
-hi! link		jsConditional						Operator
+hi! link		jsConditional						Tag
 
 hi! link		jsSpreadOperator				Macro
 hi! link		jsRestOperator					Macro

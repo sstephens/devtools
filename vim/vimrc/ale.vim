@@ -18,8 +18,8 @@ let g:ale_set_quickfix = 1
 "let g:ale_open_list = 1
 
 " -- faster error nav with ale
-nmap <leader>an <Plug>(ale_next_wrap)
-nmap <leader>ab <Plug>(ale_previous_wrap)
+nmap <leader>= <Plug>(ale_next_wrap)
+nmap <leader>+ <Plug>(ale_previous_wrap)
 nmap <leader>af <Plug>(ale_fix)
 nmap <leader>al <Plug>(ale_lint)
 nmap <leader>ad <Plug>(ale_detail)
