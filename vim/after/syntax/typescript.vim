@@ -1,6 +1,11 @@
 
 syntax keyword typescriptObjectStaticMethod contained assign nextgroup=typescriptFuncCallArg
 syntax keyword typescriptArrayMethod contained length nextgroup=typescriptFuncCallArg
+syntax match   typescriptFuncCall	contained /\K\k*(/me=e-1 nextgroup=typescriptFuncCallArg,typescriptCallImpl
+syntax match   typescriptDotNotation  /\./ nextgroup=typescriptProp,typescriptFuncCall skipnl
+
+syntax cluster typescriptValue add=typescriptFuncCall,typescriptRestOrSpread
+syntax cluster typescriptStatement add=typescriptFuncCall,
 
 hi! link typescriptReserved									Label
 hi! link typescriptGlobal										Structure
@@ -37,11 +42,14 @@ hi! link typescriptPrototype								Label
 hi! link typescriptDefault									Label
 hi! link typescriptAccessibilityModifier		SpecialChar
 
-hi! link typescriptClassName								Normal
+hi! link typescriptFuncName									PreCondit
+hi! link typescriptClassName								PreCondit
+
+hi! link typescriptFuncCall									DeepBlue
+
 hi! link typescriptMember										Normal
-hi! link typescriptFuncName									Normal
+hi! link typescriptObjectLabel							DeepPurple
 "hi! link typescriptParenExp									Macro
-hi! link typescriptObjectLabel							Normal
 
 hi! link typescriptMethodAccessor						Statement
 hi! link typescriptClassStatic							Statement
@@ -123,10 +131,10 @@ hi! link typescriptTemplateSB								Tag
 "hi! link typescriptTemplateSubstitution			PreProc
 
 " ts func params
-hi! link typescriptCall											PreProc
-hi! link typescriptParamImpl								PreProc
-hi! link typescriptArrowFuncArg							PreProc
-hi! link typescriptFuncType									PreProc
+hi! link typescriptCall											Tag
+hi! link typescriptParamImpl								Tag
+hi! link typescriptArrowFuncArg							Tag
+hi! link typescriptFuncType									Tag
 
 " ts types
 hi! link typescriptFuncTypeArrow						Tag
@@ -150,15 +158,18 @@ hi! link typescriptTypeBrackets							Tag
 hi! link typescriptInterfaceTypeParameter		Tag
 hi! link typescriptInterfaceTypeArguments		Tag
 hi! link typescriptUnion										Tag
-hi! link typescriptObjectSpread							Tag
 hi! link typescriptMappedIn									Tag 
 hi! link typescriptTypeQuery								Tag
 hi! link typescriptConstructorType					Tag
 hi! link typescriptUserDefinedType					Tag
 hi! link typescriptConstraint								Tag
 
+hi! link typescriptVariableDeclaration			Normal
 hi! link typescriptAliasDeclaration					Normal
 hi! link typescriptInterfaceName						Normal
+
+hi! link typescriptObjectSpread							PreProc
+hi! link typescriptRestOrSpread							PreProc
 
 hi! link typescriptDocNotation							PreProc
 hi! link typescriptDocTags									PreProc
@@ -169,9 +180,37 @@ hi! link typescriptDocParamType							PreCondit
 hi! link typescriptDocParam									Cyan
 hi! link typescriptRef											SpecialComment 
 
-" hi! link typescriptProp											Magenta
+hi! link typescriptDecorator								DeepPurple
 " hi! link typescriptDefaultParam							Magenta
 " hi! link typescriptFuncImpl									Magenta
 " hi! link typescriptCallImpl									Magenta
-" hi! link typescriptFuncCall									Magenta
+hi! link typescriptIdentifierName						Magenta
 
+
+
+"
+" TSX
+"
+syntax region tsxEscJs
+    \ contained
+    \ contains=@typescriptValue,@tsxComment,typescriptStatement,typescriptValue,typescriptEventTypes,typescriptPrimitive
+    \ matchgroup=typescriptBraces
+    \ start=+{+
+    \ end=+}+
+    \ extend
+
+hi! link tsxTag															Tag
+hi! link tsxCloseTag												Tag
+hi! link tsxCloseString											Tag
+hi! link tsxEqual														Tag
+
+hi! link tsxTagName													Type
+hi! link tsxNameSpace												Type
+hi! link tsxIntrinsicTagName								Statement
+hi! link tsxAttrib													Special
+hi! link tsxString													String
+
+hi! link tsxBlockComment										Comment
+hi! link tsxLineComment											Comment
+
+hi! link tsxCommentInvalid									Error

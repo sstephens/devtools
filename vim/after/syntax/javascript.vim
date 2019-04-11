@@ -103,6 +103,9 @@ hi! link		jsImport								Tag
 hi! link		jsExport								jsImport 
 hi! link		jsFrom									jsImport
 
+hi! link		jsNull									Macro
+hi! link		jsUndefined							Macro
+
 hi! link		jsThis									PreCondit
 hi! link		jsSuper									jsThis
 hi! link		jsExportDefault					Label
@@ -114,13 +117,14 @@ hi! link		jsFinally								Operator
 hi! link		jsStorageClass					Operator
 hi! link		jsConditional						Tag
 
-hi! link		jsSpreadOperator				Macro
-hi! link		jsRestOperator					Macro
+hi! link		jsSpreadOperator				PreProc 
+hi! link		jsRestOperator					PreProc
 
 hi! link		jsFunction							Function
-hi! link		jsFuncName							Normal
-hi! link		jsFuncCall							Normal
-hi! link		jsFuncArgs							PreProc
+hi! link		jsFuncName							PreCondit
+hi! link		jsFuncCall							DeepBlue
+hi! link		jsFuncArgs							Tag
+hi! link		jsObjectKey							DeepPurple
 
 hi! link		jsFuncBraces						jsBraces
 hi! link		jsIfElseBraces					jsBraces 
@@ -157,14 +161,3 @@ hi def link jsCodeComment						jsComment
 hi def link jsBoldComment						jsComment
 
 
-"
-" ---- JSX -------
-"
-hi! link		xmlString								String
-hi! link		xmlTagName							Macro
-hi! link		xmlTag									Tag
-hi! link		xmlEndTag								Tag
-hi! link		xmlAttrib								Label
-
-hi! link		jsxChild								Magenta
-hi! link		jsxRegion								Operator

@@ -23,6 +23,9 @@ exe "hi! RedHighlight ctermfg=167 guifg=#d75f5e"
 exe "hi! GreenHighlight ctermfg=106 guifg=#87af00"
 exe "hi! CyanHighlight ctermfg=87 guifg=#5fffff"
 
+exe "hi! DeepPurple ctermfg=104 guifg=#8787d7"
+exe "hi! DeepBlue ctermfg=74 guifg=#8787d7"
+
 exe "hi! RedBackground ctermfg=255 ctermbg=52 guifg=#ffffff guibg=#5f0000"
 exe "hi! LightRedBackground ctermfg=255 ctermbg=124 guifg=#ffffff guibg=#af0000"
 exe "hi! YellowBackground ctermfg=0 ctermbg=221 guifg=#000000 guibg=#ffd75f"
@@ -56,7 +59,7 @@ hi! link MatchParen					DimBlueYellow
 hi! link vimMapModKey				YellowHighlight
 
 hi! link Visual							BlueBackground
-hi! link Constant						Magenta
+hi! link Constant						CyanHighlight
 
 hi! link PreProc						BlueHighlight
 hi! link PreCondit					GreenHighlight
