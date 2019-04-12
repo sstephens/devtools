@@ -47,8 +47,8 @@ hi! link typescriptClassName								PreCondit
 
 hi! link typescriptFuncCall									DeepBlue
 
-hi! link typescriptMember										Normal
-hi! link typescriptObjectLabel							DeepPurple
+hi! link typescriptMember										PreCondit
+hi! link typescriptObjectLabel							Tag
 "hi! link typescriptParenExp									Macro
 
 hi! link typescriptMethodAccessor						Statement
@@ -177,7 +177,7 @@ hi! link typescriptDocName									Macro
 hi! link typescriptDocNamedParamType				PreCondit
 hi! link typescriptDocParamName							Macro
 hi! link typescriptDocParamType							PreCondit
-hi! link typescriptDocParam									Cyan
+hi! link typescriptDocParam									NonText
 hi! link typescriptRef											SpecialComment 
 
 hi! link typescriptDecorator								DeepPurple

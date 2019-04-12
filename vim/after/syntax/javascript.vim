@@ -124,7 +124,7 @@ hi! link		jsFunction							Function
 hi! link		jsFuncName							PreCondit
 hi! link		jsFuncCall							DeepBlue
 hi! link		jsFuncArgs							Tag
-hi! link		jsObjectKey							DeepPurple
+hi! link		jsObjectKey							Tag
 
 hi! link		jsFuncBraces						jsBraces
 hi! link		jsIfElseBraces					jsBraces 
