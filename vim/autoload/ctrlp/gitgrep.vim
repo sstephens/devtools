@@ -117,7 +117,8 @@ function! ctrlp#gitgrep#accept(mode, str)
 		let type = 'split'
 	endif
 	
-	let cmd = type.' '.a:str
+	let cwd = getcwd()
+	let cmd = type.' '.cwd.'/'.a:str
 
 	call ctrlp#exit()
 	silent execute cmd

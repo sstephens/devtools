@@ -199,20 +199,20 @@ hi! link typescriptIdentifierName						Magenta
 "     \ end=+}+
 "     \ extend
 
-" hi! link tsxTag															Tag
-" hi! link tsxCloseTag												Tag
-" hi! link tsxCloseString											Tag
-" hi! link tsxEqual														Tag
+hi! link tsxTag															Tag
+hi! link tsxCloseTag												Tag
+hi! link tsxCloseString											Tag
+hi! link tsxEqual														Tag
 
-" hi! link tsxTagName													Type
-" hi! link tsxNameSpace												Type
-" hi! link tsxIntrinsicTagName								Statement
-" hi! link tsxAttrib													Special
-" hi! link tsxString													String
+hi! link tsxTagName													Type
+hi! link tsxNameSpace												Type
 
-" hi! link tsxBlockComment										Comment
-" hi! link tsxLineComment											Comment
+hi! link tsxIntrinsicTagName								Statement
+hi! link tsxAttrib													Special
+hi! link tsxString													String
 
-" hi! link tsxCommentInvalid									Error
+hi! link tsxBlockComment										Comment
+hi! link tsxLineComment											Comment
 
+hi! link tsxCommentInvalid									Error
 

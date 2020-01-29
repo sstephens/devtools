@@ -11,6 +11,7 @@ endif
 
 let g:ale_completion_enabled = 0
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
 let g:ale_list_window_size = 10
 let g:ale_set_loclist = 0
@@ -30,10 +31,20 @@ nmap <leader>ag <Plug>(ale_go_to_definition)
 " -- linters defs
 let g:ale_linters = {
 	\'javascript': ['eslint'],
-	\'typescript': ['tslint', 'tsserver'],
+	\'javascriptreact': ['eslint'],
+	\'javascript.jsx': ['eslint'],
+	\'typescript': ['eslint', 'tsserver'],
+	\'typescriptreact': ['eslint', 'tsserver'],
+	\'typescript.tsx': ['eslint', 'tsserver'],
+	\'kotlin': ['kotlinc', 'ktlint'],
 \}
 
-let g:ale_fixers = {
-	\'javascript': ['eslint'],
-	\'typescript': ['tslint'],
-\}
+let g:ale_fixers = {}
+
+"   \'javascript': ['eslint'],
+"   \'javascriptreact': ['eslint'],
+"   \'javascript.jsx': ['eslint'],
+"   \'typescript': ['eslint'],
+"   \'typescriptreact': ['eslint'],
+"   \'typescript.tsx': ['eslint'],
+" \}

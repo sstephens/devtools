@@ -136,14 +136,14 @@ set tabstop=2																			" tab width 4 spaces
 set softtabstop=2																	" softtabstop ?
 set shiftwidth=2																	" shiftwidth ?
 set wrap																					" wrap code lines so no side scroll is needed
-set autoindent																		" auto indent code
-"set smartindent																	" auto indent code based on filetypes
+" set autoindent																		" auto indent code
+" set smartindent																		" auto indent code based on filetypes
 
 "
 " ------------ JavaScript section ---------------
 "
 au FileType javascript setl fen
-au FileType javascript setl nocindent
+" au FileType javascript setl nocindent
 
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS									
 "autocmd BufRead,BufNewFile *.{ts,tsx} set filetype=typescript

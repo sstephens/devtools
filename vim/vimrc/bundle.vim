@@ -37,27 +37,35 @@ Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
-Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
-Plugin 'mxw/vim-jsx'													" -- JAVASCRIPT MARKUP
+"
+Plugin 'sheerun/vim-polyglot'										" multi lang syntax
+
+
+" Plugin 'pangloss/vim-javascript'							" -- JAVASCRIPT
+" Plugin 'mxw/vim-jsx'													" -- JAVASCRIPT MARKUP
 " Plugin 'jelera/vim-javascript-syntax'				" -- JAVASCRIPT
 " Plugin 'othree/yajs.vim'										" -- JAVASCRIPT
-Plugin 'HerringtonDarkholme/yats.vim'					" -- TYPESCRIPT
-"Plugin 'leafgarland/typescript-vim'						
+" Plugin 'othree/es.next.syntax.vim'
+" Plugin 'HerringtonDarkholme/yats.vim'					" -- TYPESCRIPT
+" Plugin 'leafgarland/typescript-vim'						
 "let g:typescript_compiler_binary = 'tsc'
 "let g:typescript_compiler_options = '--project ./'
-"Plugin 'ianks/vim-tsx'
+" Plugin 'ianks/vim-tsx'
 
-"Plugin 'peitalin/vim-jsx-typescript'
+" Plugin 'peitalin/vim-jsx-typescript'
 " Plugin 'mhartington/vim-typings'
 " Plugin 'Quramy/tsuquyomi'
 
-Plugin 'elzr/vim-json'												" -- JSON
-Plugin 'othree/html5.vim'											" -- HTML
+" Plugin 'elzr/vim-json'												" -- JSON
+" Plugin 'othree/html5.vim'											" -- HTML
+
+" Plugin 'godlygeek/tabular'
+" Plugin 'plasticboy/vim-markdown'
 
 "
 " --- CSS SYNTAX AND STYLE ---
-Plugin 'hail2u/vim-css3-syntax'								" -- CSS highlights
-Plugin 'cakebaker/scss-syntax.vim'						" -- SASS/SCSS highlights
+" Plugin 'hail2u/vim-css3-syntax'								" -- CSS highlights
+" Plugin 'cakebaker/scss-syntax.vim'						" -- SASS/SCSS highlights
 Plugin 'gcorne/vim-sass-lint'									" -- SASS/SCSS linting
 
 "
@@ -67,9 +75,9 @@ Plugin 'codenothing/jsonlint'									" -- JSON
 "
 " --- KOTLIN PLUGINS ----
 "
-"Plugin 'udalov/kotlin-vim'										" -- KOTLIN
-"let g:ale_kotlin_kotlinc_options="--android"
-"let g:ale_kotlin_ktlint_executable="ktlint --android"
+" Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+" let g:ale_kotlin_kotlinc_options="--android"
+" let g:ale_kotlin_ktlint_executable="ktlint --android"
 
 "
 " --- COLOR SCHEME PLUGINS ---
@@ -84,7 +92,7 @@ Plugin 'nightsense/vimspectr'									" -- terminal vim colors
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
