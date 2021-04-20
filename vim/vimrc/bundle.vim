@@ -94,7 +94,6 @@ let g:ale_kotlin_ktlint_executable="ktlint --android"
 " --- COLOR SCHEME PLUGINS ---
 "
 Plugin 'altercation/vim-colors-solarized'			" -- solarized
-Plugin 'ajh17/Spacegray.vim'									" -- spacegray
 Plugin 'Heorhiy/VisualStudioDark.vim'					" -- vscode dark
 Plugin 'Badacadabra/vim-archery'							" -- archery
 Plugin 'nightsense/vimspectr'									" -- terminal vim colors
