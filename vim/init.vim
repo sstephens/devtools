@@ -152,6 +152,7 @@ autocmd BufRead,BufNewFile *.toml set filetype=gitconfig
 autocmd BufRead,BufNewFile .flowconfig set filetype=config 
 autocmd BufRead,BufNewFile .editorconfig set filetype=config 
 autocmd BufRead,BufNewFile .babelrc set filetype=json 
+autocmd BufRead,BufNewFile .env.* set filetype=sh
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0 

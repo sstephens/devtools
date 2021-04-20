@@ -22,8 +22,14 @@ call g:Importrc("nerdtree.vim")								" include nerdtree plugin
 call g:Importrc("ale.vim")										" include ale plugin
 call g:Importrc("airline.vim")								" include airline plugin
 call g:Importrc("fugitive.vim")								" include airline plugin
+call g:Importrc("android.vim")								" include android dev plugin
 "call g:Importrc("syntastic.vim")							" include syntastic plugin
 "call g:Importrc("completion.vim")						" include supertab completion plugin
+" Plugin 'autozimu/LanguageClient-neovim', {
+"       \ 'branch': 'next',
+"       \ 'do': 'bash install.sh',
+"       \ }
+
 
 "
 " --- VIM IMPROVEMENT PLUGINS ---
@@ -34,6 +40,11 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 Plugin 'machakann/vim-swap'										" vim swap delimited items
 
 Plugin 'editorconfig/editorconfig-vim'				" Editorconfig plugin
+Plugin 'JamshedVesuna/vim-markdown-preview'   " markdown preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_hotkey='<leader>mm'
+let vim_markdown_preview_browser='Google Chrome'
 
 "
 " --- LANGUAGE SYNTAX PLUGINS ----
@@ -75,9 +86,9 @@ Plugin 'codenothing/jsonlint'									" -- JSON
 "
 " --- KOTLIN PLUGINS ----
 "
-" Plugin 'udalov/kotlin-vim'										" -- KOTLIN
-" let g:ale_kotlin_kotlinc_options="--android"
-" let g:ale_kotlin_ktlint_executable="ktlint --android"
+Plugin 'udalov/kotlin-vim'										" -- KOTLIN
+let g:ale_kotlin_kotlinc_options="--android"
+let g:ale_kotlin_ktlint_executable="ktlint --android"
 
 "
 " --- COLOR SCHEME PLUGINS ---

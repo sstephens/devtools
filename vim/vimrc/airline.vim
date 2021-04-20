@@ -48,3 +48,31 @@ let g:airline_symbols.maxlinenr = '㏑'
 "let g:airline_section_warning = ''
 "let g:airline_section_c = ''
 
+
+" call airline#parts#define_function(
+"   \ 'gradle-running',
+"   \ 'ligthline#gradle#running'
+"   \)
+
+" call airline#parts#define_function(
+"   \ 'gradle-errors',
+"   \ 'ligthline#gradle#errors'
+"   \)
+
+" call airline#parts#define_function(
+"   \ 'gradle-warnings',
+"   \ 'ligthline#gradle#warnings'
+"   \)
+
+" call airline#parts#define_function(
+"   \ 'gradle-project',
+"   \ 'ligthline#gradle#project'
+"   \)
+
+" let g:airline_section_x= airline#section#create_right([
+"   \ 'filetype',
+"   \ 'gradle-running',
+"   \ 'gradle-errors',
+"   \ 'gradle-warnings'
+"   \])
+

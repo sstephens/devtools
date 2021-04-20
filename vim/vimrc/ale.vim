@@ -3,10 +3,10 @@
 "
 if g:devtools_bundle
 	" -- include plugin
-	Plugin 'w0rp/ale'												" ale linter
+	Plugin 'dense-analysis/ale'												" ale linter
 else
 	" -- include plugin
-	Plug 'w0rp/ale'													" ale linter
+	Plug 'dense-analysis/ale'													" ale linter
 endif
 
 let g:ale_completion_enabled = 0
@@ -28,6 +28,10 @@ nmap <leader>ah <Plug>(ale_hover)
 nmap <leader>ar <Plug>(ale_find_references)
 nmap <leader>ag <Plug>(ale_go_to_definition)
 
+if filereadable("./.eslintrc.js")
+	let g:javascript_eslint_options = [ '--config ./.eslintrc.js' ]
+endif
+
 " -- linters defs
 let g:ale_linters = {
 	\'javascript': ['eslint'],
@@ -36,7 +40,10 @@ let g:ale_linters = {
 	\'typescript': ['eslint', 'tsserver'],
 	\'typescriptreact': ['eslint', 'tsserver'],
 	\'typescript.tsx': ['eslint', 'tsserver'],
-	\'kotlin': ['kotlinc', 'ktlint'],
+	\'xml': ['android'],
+	\'groovy': ['android'],
+	\'java': ['android', 'checkstyle', 'javalsp'],
+	\'kotlin': ['android', 'ktlint', 'languageserver']
 \}
 
 let g:ale_fixers = {}
@@ -48,3 +55,4 @@ let g:ale_fixers = {}
 "   \'typescriptreact': ['eslint'],
 "   \'typescript.tsx': ['eslint'],
 " \}
+

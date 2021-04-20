@@ -1,4 +1,17 @@
 
+" syntax region  ktBlock    matchgroup=ktBraces start=/{/ end=/}/ 
+"   \ contains=ktStatement,ktConditional,ktRepeat,ktOperator,ktKeyword,ktException,ktReservedKeyword,
+"   \ fold
+
+" syntax keyword ktFuncKeyword			fun nextgroup=ktFuncName skipwhite skipempty
+
+" syntax match   ktFuncName					contained /\K\k*/ nextgroup=ktFuncImpl skipwhite
+
+" syntax region ktFuncImpl contained start=/fun/ end=/{/me=e-1
+"   \ contains=ktFuncKeyword
+"   \ nextgroup=ktBlock
+
+
 hi! link ktStatement									Tag
 hi! link ktConditional								Tag
 hi! link ktRepeat											Tag
